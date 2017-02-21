@@ -7,6 +7,10 @@ middle.use(bodyParser.json()) // parse application/json
 middle.use(cors())
 // ###################### 
 
+middle.get('/', function (req, res) {
+  res.send('nothing to see here')
+})
+
 //routes ###################### 
 const membersPg = require('./route/membersPg')
 middle.use('/membersPg', membersPg) //front route 1 - match the front end
