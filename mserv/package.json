@@ -15,10 +15,11 @@
 		, "body-parser": ">=1.1"
 		, "node-fetch": ">=1.6"
 		, "is_js": ">=0.9"
-		, "jsonwebtoken": ">= 7.2"
+		, "jsonwebtoken": ">=7.2"
 
 		, "mailgun-js": ">=0.8"
 		, "@google-cloud/datastore": ">=0.6"
+		, "node-cache": ">=4.1"
 
 	}
 
