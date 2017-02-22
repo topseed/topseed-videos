@@ -1,0 +1,29 @@
+# LabD
+## DataBinding
+
+### Setup
+- Download and run <http://github.com/topseed/topseed> as per instructions there.
+- Install  <http://tinyurl.com/mjeka4j> A browser plugin for REST
+- Required IDE: <http://code.visualstudio.com> (so you can get instructor support)
+- Use Chrome browser. Click menu (:) on right/ More Tools/ Developer Toools. This will show you 'console' for: console.log('here'); in .js.
+- Not required: prepros.io
+- Recommended: also deploy webApp to <https://zeit.co>. This way you start learning how to have a learning web site.
+
+### Goals
+You will practice front end data-binding a few different ways (browser, server, web component, etc). Pro-musicians and pro-basketball players practice, so should you. Ideally you know of Sass, Scss or LESS and have more that just a few years out of school, this is not suitable for people with only a few years experience just out of school, you need some experience deploying webapps.
+
+### MicroService, REST(y) and Fetch()
+You have setup Advanced REST Client above, run it:
+- https://middle4top-vgylwtpbxs.now.sh/membersPg/mem
+- https://middle4top-vgylwtpbxs.now.sh/membersPg/list
+
+Both should return some data on a POST.
+
+
+
+
+
+
+
+
+- Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
