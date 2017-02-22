@@ -1,11 +1,12 @@
 ## LabD
-# I Foundation basics: DataBinding
+# Foundation: DataBinding
 
 ### Goals
 Just because databinding is basic skill, it does not make it easy somehow. You will practice front end data-binding a few different ways (browser, server, web component, etc). Pro-musicians and pro-basketball players practice, so should you. Ideally you know of Sass, Scss or LESS and have more that just a few years out of school, this is not suitable for people with only a few years experience out of school, you need some experience.
 
 We do some foundation level things and then some more advanced level related to data binding. 
 
+## I Basics
 ### 0. Setup
 - Download and run
 - <http://github.com/topseed/topseed> as per instructions there. Also, that website has a link to a support form 'gitter'. Join there. If you have any questions or comments, you'll find support there from the instructors.
@@ -42,7 +43,7 @@ View console. When we click, we get a 'primary key' of the clicked row.
 VIew source.
 You should glance docs on <http://datatables.net>. 
 
-# II LevelUp to Intermediate: DataBinding
+## II Intermediate: DataBinding
 
 ### 1 Auth
 - Using Advanced REST Client 
@@ -70,7 +71,7 @@ Review fetch() for server side rendering (SSR) /data binding.
 - <https://github.com/topseed/topseed-demos/blob/master/webApp/route/membersAmp.js>
 See ~ line 108 a fetch() that we then place in our htm. If your app does SSR and in-browser data binding, geeks will call it 'isomorphic'. Most of the times this is a requirement in front end coding to have an rich SPA and a SSR. For example mobile, landing page, or SEO might need to be SSR. Then when user clicks, they get SPA.
 
-# III Advanced Perspectives: DataBinding
+## III Advanced
 
 ### 1 Web Comp
 There are many component libs, and you may need to polyglot, ie know more than one, since they change every 18 months or so.
@@ -82,7 +83,6 @@ Check out SPA vs SSR:
 vs
 - <https://1595566120.rsc.cdn77.org/members/dBind/>
 
-
 - Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
 
 # Lab: DataBinding
@@ -93,7 +93,7 @@ This does not work. It is in the topseed that you downloaded.
 The component is missing DOM mark up.
 Implement it.
 
-## Notice that the page action loads the component. And the data comes from page. The component then notifies the page of something page may need to listen to - in an loosely coupled way (via events)
+### Notice that the page action loads the component. And the data comes from page. The component then notifies the page of something page may need to listen to - in an loosely coupled way (via events)
 
 
 #### That is it for the data binding, now on to some more important front end skills. 
