@@ -11,15 +11,15 @@ We do some foundation level things and then some more advanced level related to 
 - Download and run
 - <http://github.com/topseed/topseed> as per instructions there. Also, that website has a link to a support form 'gitter'. Join there. If you have any questions or comments, you'll find support there from the instructors.
 - Install  
- <http://tinyurl.com/mjeka4j> A browser plugin for REST
+ <http://tinyurl.com/mjeka4j> Advanced REST Client, a Chrome browser plugin for REST
 - Required IDE: 
- <http://code.visualstudio.com> (so you can get instructor support). For god's sake set it to auto-save and use tabs, not spaces, don't be a savage ;-).
+ <http://code.visualstudio.com> (so you can get instructor support). Set it to auto-save and use tabs, not spaces, don't be a savage ;-).
 - Use Chrome browser. Click menu (:) on right/ More Tools/ Developer Tools. This will show you 'console' for: console.log('here'); in .js.
-- Not required: prepros.io
-- Recommended: also deploy webApp to <https://zeit.co>. This way you start learning how to have a learning web site.
+- Optional: prepros.io
+- Recommended: Install <https://zeit.co> and deploy /topseed/webApp. This way you start learning how to have a learning web site.
 
 ### 1a. MicroService, REST(y) and fetch()
-You have setup Advanced REST Client above, run these urls in it:
+You have setup Advanced REST Client above, run a POST to these urls:
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/mem
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/list
 Both should return some JSON data on a POST.
