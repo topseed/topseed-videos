@@ -15,33 +15,36 @@ We do some foundation level things and then some more advanced level related to 
 - Required IDE: 
  <http://code.visualstudio.com> (so you can get instructor support). Set it to auto-save and use tabs, not spaces, don't be a savage ;-).
 - Use Chrome browser. Click menu (:) on right/ More Tools/ Developer Tools. This will show you 'console' for: console.log('here'); in .js.
-- Optional: prepros.io
+- Optional: Install prepros.io and add /topseed/webApp as project.
 - Recommended: Install <https://zeit.co> and deploy /topseed/webApp. This way you start learning how to have a learning web site.
 
-### 1a. MicroService, REST(y) and fetch()
-You have setup Advanced REST Client above, run a POST to these urls:
+### 1a. MicroService, REST(y)
+Using Advanced REST Client above, execute POSTs to these urls:
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/mem
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/list
-Both should return some JSON data on a POST.
+Both should return some JSON data.
 
-### 1b.
-In later labs, you will use topseed-demos for github. But now, in browser w/ 'developer console' open, go to:
+### 1b. Using fetch() for remote data calls
+In the browser with the Developer Tools open, go to:
 - <https://1595566120.rsc.cdn77.org/_tsts/tst1.html>
-- view source and tst1.js in there.
-This is an example of 'fetch()' that replaces Ajax and XHR.
+- View page source (rightclick on content) and tst1.js.
+This is an example of JavaScript 'fetch()' browser standard that replaces Ajax and XHR.
+You can find the source at https://github.com/topseed/topseed-demos/tree/master/webApp/www/_tsts 
 
-### 2a.
-In browser form:
+### 2a. Reading data from HTML form
+In browser with the Developer Tools open, go to:
 - <https://1595566120.rsc.cdn77.org/members/authJoin/>
-Click on button and view developer console.
-You'll see the form data captured. Just like the basic form processing using 'name' attribute of a form field.
+- Enter some data and Click on NEW/JOIN button. See the form data logged in Developer Tools console.
+- View page source and <script> function init(). It uses jQuery jsForm to access the html form data.
+(jQuery is loaded in /_js/setup.js) 
 
-### 2b. 
-Now a table/list:
+
+### 2b. Rendering List data
+Go to:
 - <https://1595566120.rsc.cdn77.org/members/dBindDT/index0.html>
-View console. When we click, we get a 'primary key' of the clicked row.
-VIew source.
-You should glance docs on <http://datatables.net>. 
+- View Developer Tools console. When you click on a line, you get a 'primary key' of the clicked row.
+- View page source and <script> function dtInit(). 
+- Recommended: Read docs at <http://datatables.net>. 
 
 ## II Intermediate: DataBinding
 
