@@ -38,7 +38,7 @@ You'll see the form data captured. Just like the basic form processing using 'na
 
 ### 2b. 
 Now a table/list:
-- <https://1595566120.rsc.cdn77.org/members/dBindDT/index0.html
+- <https://1595566120.rsc.cdn77.org/members/dBindDT/index0.html>
 View console. When we click, we get a 'primary key' of the clicked row.
 VIew source.
 You should glance docs on <http://datatables.net>. 
@@ -71,6 +71,13 @@ Review fetch() for server side rendering (SSR) /data binding.
 - <https://github.com/topseed/topseed-demos/blob/master/webApp/route/membersAmp.js>
 See ~ line 108 a fetch() that we then place in our htm. If your app does SSR and in-browser data binding, geeks will call it 'isomorphic'. Most of the times this is a requirement in front end coding to have an rich SPA and a SSR. For example mobile, landing page, or SEO might need to be SSR. Then when user clicks, they get SPA.
 
+You can see the SPA:
+https://1595566120.rsc.cdn77.org/members/dBind/?w=1
+and SSR:
+https://1595566120.rsc.cdn77.org/members/dBind
+
+View source on both.
+
 ## III Advanced
 
 ### 1 Web Comp
@@ -85,16 +92,14 @@ vs
 
 - Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
 
-# Lab: DataBinding
-## Hands on:
+# Lab:Hands on DataBinding component`
 
-This does not work. It is in the topseed that you downloaded.
 - <https://github.com/topseed/topseed/tree/master/webApp/www/members/LABD>
-The component is missing DOM mark up.
-Implement it.
+The lab is in the topseed that you downloaded.
+The component used on page is missing DOM mark up.
+Implement it to make it works. (Solution is in -demo, if you just want to cut paste from a working component: just the DOM)
 
-### Notice that the page action loads the component. And the data comes from page. The component then notifies the page of something page may need to listen to - in an loosely coupled way (via events)
-
+### Notice that a page action loads the page. The page then fetches the data and loads the component. The data comes from page, and gets stored in component('s DOM). The component then can notify the page of something page may need to listen to - in an loosely coupled way (via events). So it flows from page to comp, and then it may bubble back up from comp to page. Also the (UI) component should be reusable, independent, and encapsulated. 
 
 #### That is it for the data binding, now on to some more important front end skills. 
 
