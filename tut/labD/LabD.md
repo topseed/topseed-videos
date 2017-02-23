@@ -11,15 +11,15 @@ We do some foundation level things and then some more advanced level related to 
 - Download and run
 - <http://github.com/topseed/topseed> as per instructions there. Also, that website has a link to a support form 'gitter'. Join there. If you have any questions or comments, you'll find support there from the instructors.
 - Install  
-- <http://tinyurl.com/mjeka4j> A browser plugin for REST
+ <http://tinyurl.com/mjeka4j> A browser plugin for REST
 - Required IDE: 
-- <http://code.visualstudio.com> (so you can get instructor support). For god's sake set it to auto-save and use tabs, not spaces, don't be a savage ;-).
+ <http://code.visualstudio.com> (so you can get instructor support). For god's sake set it to auto-save and use tabs, not spaces, don't be a savage ;-).
 - Use Chrome browser. Click menu (:) on right/ More Tools/ Developer Tools. This will show you 'console' for: console.log('here'); in .js.
 - Not required: prepros.io
 - Recommended: also deploy webApp to <https://zeit.co>. This way you start learning how to have a learning web site.
 
 ### 1a. MicroService, REST(y) and fetch()
-You have setup Advanced REST Client above, run it:
+You have setup Advanced REST Client above, run these urls in it:
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/mem
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/list
 Both should return some JSON data on a POST.
@@ -64,7 +64,7 @@ Most of the time, you also have to make a SSR (Server Side Rendering) version of
 
 Something like that can be used to signal to server to send out SPA or SSR page. You can use w/ layout like:
 
-	![](layout.png)
+![](layout.png)
 
 Just because you are talking advanced topics, does not imply that one can implement them.
 Review fetch() for server side rendering (SSR) /data binding.
@@ -72,23 +72,21 @@ Review fetch() for server side rendering (SSR) /data binding.
 See ~ line 108 a fetch() that we then place in our htm. If your app does SSR and in-browser data binding, geeks will call it 'isomorphic'. Most of the times this is a requirement in front end coding to have an rich SPA and a SSR. For example mobile, landing page, or SEO might need to be SSR. Then when user clicks, they get SPA.
 
 You can see the SPA:
-https://1595566120.rsc.cdn77.org/members/dBind/?w=1
+- https://1595566120.rsc.cdn77.org/members/dBind/?w=1
 and SSR:
-https://1595566120.rsc.cdn77.org/members/dBind
+- https://1595566120.rsc.cdn77.org/members/dBind
 
-View source on both.
+View source on both! Same component is used both in SPA and in SSR. 
 
 ## III Advanced
 
 ### 1 Web Comp
-There are many component libs, and you may need to polyglot, ie know more than one, since they change every 18 months or so.
+There are many component libs, and you may need to 'polyglot', ie know more than one, since they change every 18 months or so.
 ![](poly.png)
 We will use the easiest one to learn: <http://riotjs.com>
 
-Check out SPA vs SSR:
+Check out SPA again, notice it is using a component:
 - <https://1595566120.rsc.cdn77.org/members/dBind/?w=1>
-vs
-- <https://1595566120.rsc.cdn77.org/members/dBind/>
 
 - Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
 
