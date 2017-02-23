@@ -35,7 +35,7 @@ You can find the source at https://github.com/topseed/topseed-demos/tree/master/
 In browser with the Developer Tools open, go to:
 - <https://1595566120.rsc.cdn77.org/members/authJoin/>
 - Enter some data and Click on NEW/JOIN button. See the form data logged in Developer Tools console.
-- View page source and <script> function init(). It uses jQuery jsForm to access the html form data.
+- View page source and the javascript function init(). It uses jQuery jsForm to access the html form data.
 (jQuery is loaded in /_js/setup.js) 
 
 
@@ -43,7 +43,7 @@ In browser with the Developer Tools open, go to:
 Go to:
 - <https://1595566120.rsc.cdn77.org/members/dBindDT/index0.html>
 - View Developer Tools console. When you click on a line, you get a 'primary key' of the clicked row.
-- View page source and <script> function dtInit(). 
+- View page source and the javascript function dtInit(). 
 - Recommended: Read docs at <http://datatables.net>. 
 
 ## II Intermediate: DataBinding
