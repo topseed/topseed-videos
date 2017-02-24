@@ -80,10 +80,11 @@ In development we don't use domains, so we use ?w=1 to simulate a call to the "W
 <https://github.com/topseed/topseed/blob/master/webApp/util/Decider.js>  See isW() function ~ line 48.
 
 Node.js - which runs JavaScript on the server - allows us to use essentially the same code to obtain data 
-from an API, either client- and server-side, depending on the request.
+from an API, either client-side or server-side, depending on the request.
 
 For Search Engine Optimization (SEO), you may aim to make at least the homepage AMP/HTML only. Links may lead
-to rich "Web" pages that have JavaScript and more functionality.
+to rich "Web" pages that have JavaScript and more functionality. You can always move dynamic parts
+of the homepage that require JavaScript into an iframe. Ads use iframes, too.
 
 ### 3 File Layout
 
