@@ -51,24 +51,25 @@ a smoother, more desktop-like user experience.
 ### 2c. Client-side binding of list data obtained from an API via fetch()
 In the previous step, we saw list the list data in JSON format hardcoded in the page.
 - Go to https://1595566120.rsc.cdn77.org/members/dBind/?w=1 
-[TBD: need  version without component, we're not there yet in this tutorial]
+- View page source and look for JavaScript fetch().  
+[TBD: need version without component, we're not there yet in this tutorial]
 
 ## II Intermediate databinding
 
 ### 1a Server-side binding of list data: the output
-In certain situations (e.g. for basic/slower mobile devices) you will want to use as little JavaScript in the browser as possible.
-If you are able to avoid JavaScript at all - at minimum for your home page -, the page may qualify as an "AMP" page which 
-gets higher ranking (and free caching) by Google. To get there, you may need to bind your data server-side
-before sending it to the browser as an already complete page.
+In certain situations (e.g. for basic/slower mobile devices) you will want to use as little JavaScript 
+in the browser as possible. If you are able to avoid JavaScript at all the page may qualify as an "AMP" page 
+which gets higher ranking for mobile searches (and free caching) by Google. To get there, you may need 
+to bind your data server-side before sending it to the browser as an already complete page.
 - Go to https://1595566120.rsc.cdn77.org/members/dBind/
-- View page source and see the complete HTML and zero JavaScript.
+- View page source and see the complete HTML and zero JavaScript.  
 [TBD: clean up/reduce CSS]
 
 ### 1b Server-side binding of list data: the mechanism 
 To obtain complete HTML in 1a we use JavaScript on the server (running on Node.js) to compose the page before 
 returning it to the browser. Inspect the server-side code here:
 - <https://github.com/topseed/topseed-demos/blob/master/webApp/route/membersAmp.js>
-See ~ line 108 for a fetch(). We place the fetch results in the HTML response.
+See ~ line 108 for a fetch(). We place the fetch results in the HTML response.  
 [TBD: version without component, and move fetch code to the top of the JS as much as possible]
 
 ### 2 Deciding whether to return the client-side or server-side rendered version
@@ -78,10 +79,10 @@ In development we don't use domains, so we use ?w=1 to simulate a call to the "W
 - Optional: If you are curious how this "deciding" is done on the server, inspect
 <https://github.com/topseed/topseed/blob/master/webApp/util/Decider.js>  See isW() function ~ line 48.
 
-Node.js - which runs JavaScript on the server - allows us to use essentially the same code to obtain data from an API, 
-both client- and server-side, depending on the request.
+Node.js - which runs JavaScript on the server - allows us to use essentially the same code to obtain data 
+from an API, either client- and server-side, depending on the request.
 
-For Search Engine Optimization, you may aim to make at least the homepage AMP/HTML only. Links may lead
+For Search Engine Optimization (SEO), you may aim to make at least the homepage AMP/HTML only. Links may lead
 to rich "Web" pages that have JavaScript and more functionality.
 
 ### 3 File Layout
