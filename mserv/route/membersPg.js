@@ -3,8 +3,6 @@ const express = require("express");
 const router = express.Router();
 const DATA = require("./data");
 const AUTH = require("./auth");
-// 3 use cases: dt, auth, jrender
-//methods ###################### 
 router.post('/join', function (req, res) {
     console.log(req.body);
     const obj = req.body;

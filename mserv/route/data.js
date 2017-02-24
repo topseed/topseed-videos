@@ -1,6 +1,3 @@
-// http://cloud.google.com/datastore/docs/datastore-api-tutorial
-// http://cloud.google.com/datastore/docs/concepts/entities
-// http://cloud.google.com/datastore/docs/concepts/queries
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
 function fakeRender() {
@@ -178,7 +175,7 @@ function fakeDW() {
                 "$112,000"
             ]
         ]
-    }; //return
-} //()
+    };
+}
 exports.fakeDW = fakeDW;
 //# sourceMappingURL=data.js.map
