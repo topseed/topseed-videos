@@ -5,7 +5,7 @@
 		{"node": ">=7.6",
 		 "npm": ">=4.1"
 		},
-	"comment_only": "// npm-check-updates -u,  jwt simple jwt express, jsonwebtoken",
+	"comment_only": "// npm-check-updates -u",
 	"scripts": {"start": "node index.js"},
 
 	"dependencies": {
