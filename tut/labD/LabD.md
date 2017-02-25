@@ -116,7 +116,7 @@ Check out SPA again, notice it is using a component:
 
 - Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
 
-# Lab:Hands on DataBinding component`
+# Lab: Hands on DataBinding component
 
 - <https://github.com/topseed/topseed/tree/master/webApp/www/members/LABD>
 The lab is in the topseed that you downloaded.
