@@ -20,8 +20,6 @@ The lab is in the topseed that you downloaded.
 The component used on page is missing DOM mark up.
 Implement it to make it works. (Solution is in -demo, if you just want to cut paste from a working component: just the DOM)
 
-![](weknow.gif)
-
 #### Notice that a page action loads the page. The page then fetches the data and loads the component. The data comes from page, and gets stored in component('s DOM). The component then can notify the page of something page may need to listen to - in an loosely coupled way (via events). So it flows from page to comp, and then it may bubble back up from comp to page. Also the (UI) component should be reusable, independent, and encapsulated. 
 
 Also:

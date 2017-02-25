@@ -101,3 +101,7 @@ with 'body' of message as
 and custom Content-Type: application/json
 
 This will return a JSON Web Token, or an error message if the password is not '123'.
+
+### End of this section.
+
+![](weknow.gif)
