@@ -48,31 +48,29 @@ a smoother, more desktop-like user experience.
 - View page source and the JavaScript function dtInit(). 
 - Recommended: Read documentation at <http://datatables.net>. 
 
-### 2c. Client-side binding of list data obtained from an API via fetch()
+### 2c. In-Browser binding of list data obtained from an API via fetch()
 In the previous step, we saw list the list data in JSON format hardcoded in the page.
 - Go to https://1595566120.rsc.cdn77.org/members/dBind/?w=1 
-- View page source and look for JavaScript fetch().  
-[TBD: need version without component, we're not there yet in this tutorial]
+- View page source.
 
 ## II Intermediate databinding
 
-### 1a Server-side binding of list data: the output
+### 1a. Server-side binding of list data: the output
 In certain situations (e.g. for basic/slower mobile devices) you will want to use as little JavaScript 
 in the browser as possible. If you are able to avoid JavaScript at all the page may qualify as an "AMP" page 
 which gets higher ranking for mobile searches (and free caching) by Google. To get there, you may need 
 to bind your data server-side before sending it to the browser as an already complete page.
 - Go to https://1595566120.rsc.cdn77.org/members/dBind/
 - View page source and see the complete HTML and zero JavaScript.  
-[TBD: clean up/reduce CSS]
 
-### 1b Server-side binding of list data: the mechanism 
+### 1b. Server-side binding of list data: the mechanism 
 To obtain complete HTML in 1a we use JavaScript on the server (running on Node.js) to compose the page before 
 returning it to the browser. Inspect the server-side code here:
 - <https://github.com/topseed/topseed-demos/blob/master/webApp/route/membersAmp.js>
-See ~ line 108 for a fetch(). We place the fetch results in the HTML response.  
-[TBD: version without component, and move fetch code to the top of the JS as much as possible]
+See ~ line 108 for a fetch(). It is using Promise, not callbacks. Also don't use XHR or Ajax. We place the fetch results in the HTML response.  
 
-### 2 Deciding whether to return the client-side or server-side rendered version
+
+### 2. Deciding whether to return the client-side or server-side rendered version
 In production, you can use subdomains to decide. E.g. when m.topseed.io is called, return the AMP "html only" version.
 When www.topseed.io is called, return the "Web" version that contains JavaScript.
 In development we don't use domains, so we use ?w=1 to simulate a call to the "Web" version.
@@ -86,13 +84,13 @@ For Search Engine Optimization (SEO), you may aim to make at least the homepage 
 to rich "Web" pages that have JavaScript and more functionality. You can always move dynamic parts
 of the homepage that require JavaScript into an iframe. Ads use iframes, too.
 
-### 3 File Layout
+### 3. File Layout
 
 ![](layout.png)
 
-[TBD: explain layout]
+For each url, we have a directory and in that directory is both amp.html and spa.html.
 
-### 4 Authentication
+### 4. Authentication
 - Using Advanced REST Client, try: 
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/join
 with 'body' of message as 
@@ -111,8 +109,8 @@ There are many component libs, and you may need to 'polyglot', ie know more than
 ![](poly.png)
 We will use the easiest one to learn: <http://riotjs.com>
 
-Check out SPA again, notice it is using a component:
-- <https://1595566120.rsc.cdn77.org/members/dBind/?w=1>
+Check out this SPA, notice it is using a component:
+- <https://1595566120.rsc.cdn77.org/members/dBind/spa2.html?w=1>
 
 - Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
 
@@ -123,6 +121,17 @@ The lab is in the topseed that you downloaded.
 The component used on page is missing DOM mark up.
 Implement it to make it works. (Solution is in -demo, if you just want to cut paste from a working component: just the DOM)
 
-### Notice that a page action loads the page. The page then fetches the data and loads the component. The data comes from page, and gets stored in component('s DOM). The component then can notify the page of something page may need to listen to - in an loosely coupled way (via events). So it flows from page to comp, and then it may bubble back up from comp to page. Also the (UI) component should be reusable, independent, and encapsulated. 
+![](weknow.gif)
 
-#### That is it for the data binding, now on to some more important front end skills. 
+#### Notice that a page action loads the page. The page then fetches the data and loads the component. The data comes from page, and gets stored in component('s DOM). The component then can notify the page of something page may need to listen to - in an loosely coupled way (via events). So it flows from page to comp, and then it may bubble back up from comp to page. Also the (UI) component should be reusable, independent, and encapsulated. 
+
+Also:
+- 'fetch' from page, never from comp
+- get databinding to work in page, w/o component first
+- ui components are optional (designers should do ui)
+- sometimes you don't need both server side and in-browser
+- avoid HTML in js
+- test in build.phonegap 
+- check SEO. Webmaster tools has view as bot
+
+That is it for the data binding, now on to some more important front end skills. 
