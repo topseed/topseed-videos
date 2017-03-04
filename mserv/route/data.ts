@@ -2,6 +2,8 @@
 // http://cloud.google.com/datastore/docs/concepts/entities
 // http://cloud.google.com/datastore/docs/concepts/queries
 
+// http://github.com/GoogleCloudPlatform/nodejs-docs-samples
+
 'use strict'
 
 export function fakeRender() {
