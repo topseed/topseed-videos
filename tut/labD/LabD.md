@@ -11,7 +11,7 @@ We do some foundation level things and then some more advanced level related to 
 
 ## I Databinding basics
 ### 0. Setup
-- Download and run <http://github.com/topseed/topseed> as per instructions there. Also, 
+- Download and run <http://github.com/topseed/topseed> as per instructions there (maybe use a released version). Also,
 that website has a link to a support form 'gitter'. Join there. If you have any questions or comments, 
 you'll find support there from the instructors.
 - Install  <http://tinyurl.com/mjeka4j> Advanced REST Client, a Chrome browser plugin for REST
@@ -28,10 +28,9 @@ Using Advanced REST Client above, execute POSTs to these urls:
 Both should return some JSON data.
 
 ### 1b. Using fetch() for remote data calls
-- In the browser with the Developer Tools open, go to https://1595566120.rsc.cdn77.org/_tsts/tst1.html>
+- In the browser with the Developer Tools open, go to http://localhost:8080/_tsts/tst1.html
 - View page source (rightclick on content) and tst1.js.
 This is an example of JavaScript 'fetch()' browser standard that replaces Ajax and XHR.
-You can find the source at https://github.com/topseed/topseed-demos/tree/master/webApp/www/_tsts 
 
 ### 2a. Reading data from HTML form
 In browser with the Developer Tools open, go to <https://1595566120.rsc.cdn77.org/members/authJoin/>
@@ -40,22 +39,23 @@ In browser with the Developer Tools open, go to <https://1595566120.rsc.cdn77.or
 (jQuery is loaded in /_js/setup.js) 
 
 ### 2b. Client-side binding of list data
-With any a reasonably powerful browser (i.e. all except slow mobile devices) you can use JavaScript to dynamically
-populate a list, and do further operations in the browser, possibly without going back to the server. That may help with 
+You can use JavaScript to dynamically
+populate a list, and do further operations in the browser. That may help with
 a smoother, more desktop-like user experience.
 - Go to <https://1595566120.rsc.cdn77.org/members/dBindDT/index0.html>
 - View Developer Tools console. When you click on a line, you get a 'primary key' of the clicked row.
 - View page source and the JavaScript function dtInit(). 
 - Recommended: Read documentation at <http://datatables.net>. 
 
+x
 ### 2c. In-Browser binding of list data obtained from an API via fetch()
 In the previous step, we saw list the list data in JSON format hardcoded in the page.
 - Go to https://1595566120.rsc.cdn77.org/members/dBind/?w=1 
 - View page source.
 
-## II Intermediate databinding
+## II More databinding
 
-### 1a. Server-side binding of list data: the output
+### 3a. Server-side binding of list data: the output
 In certain situations (e.g. for basic/slower mobile devices) you will want to use as little JavaScript 
 in the browser as possible. If you are able to avoid JavaScript at all the page may qualify as an "AMP" page 
 which gets higher ranking for mobile searches (and free caching) by Google. To get there, you may need 
@@ -63,14 +63,14 @@ to bind your data server-side before sending it to the browser as an already com
 - Go to https://1595566120.rsc.cdn77.org/members/dBind/
 - View page source and see the complete HTML and zero JavaScript.  
 
-### 1b. Server-side binding of list data: the mechanism 
+### 3b. Server-side binding of list data: the mechanism 
 To obtain complete HTML in 1a we use JavaScript on the server (running on Node.js) to compose the page before 
 returning it to the browser. Inspect the server-side code here:
 - <https://github.com/topseed/topseed-demos/blob/master/webApp/route/membersAmp.js>
 See ~ line 108 for a fetch(). It is using Promise, not callbacks. Also don't use XHR or Ajax. We place the fetch results in the HTML response.  
 
 
-### 2. Deciding whether to return the client-side or server-side rendered version
+### 4. Deciding whether to return the client-side or server-side rendered version
 In production, you can use subdomains to decide. E.g. when m.topseed.io is called, return the AMP "html only" version.
 When www.topseed.io is called, return the "Web" version that contains JavaScript.
 In development we don't use domains, so we use ?w=1 to simulate a call to the "Web" version.
@@ -84,13 +84,13 @@ For Search Engine Optimization (SEO), you may aim to make at least the homepage 
 to rich "Web" pages that have JavaScript and more functionality. You can always move dynamic parts
 of the homepage that require JavaScript into an iframe. Ads use iframes, too.
 
-### 3. File Layout
+### 5. File Layout
 
 ![](layout.png)
 
 For each url, we have a directory and in that directory is both amp.html and spa.html.
 
-### 4. Authentication
+### 6. Authentication
 - Using Advanced REST Client, try: 
 - https://middle4top-vgylwtpbxs.now.sh/membersPg/join
 with 'body' of message as 
