@@ -1,9 +1,9 @@
 ## LabD
 #  DataBinding
 
-## III Advanced
+## DataBinding III 
 
-### 1 Web Component
+### Web Component
 There are many component libs, and you may need to 'polyglot', ie know more than one, since they change every 18 months or so.
 ![](poly.png)
 We will use the easiest one to learn: <http://riotjs.com>
