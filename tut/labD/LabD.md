@@ -18,13 +18,12 @@ you'll find support there from the instructors.
 - Required IDE: 
  <http://code.visualstudio.com> (so you can get instructor support). Set it to auto-save and use tabs, not spaces, don't be a savage ;-).
 - Use Chrome browser. Click menu (:) on right/ More Tools/ Developer Tools. This will show you 'console' for: console.log('here'); in .js.
-- Optional: Install prepros.io and add /topseed/webApp as project.
-- Recommended: Install <https://zeit.co> and deploy /topseed/webApp. This way you start learning how to host a web site. Also setup CDN77, to learn how to have a web app on www.
+- Optional: Install <https://zeit.co> and deploy /topseed/webApp. This way you start learning how to host a web site. Also setup CDN77, to learn how to have a web app on www.
 
 ### 1a. MicroService, REST(y)
 Using Advanced REST Client above, execute POSTs to these urls:
-- https://middle4top-vgylwtpbxs.now.sh/membersPg/mem
-- https://middle4top-vgylwtpbxs.now.sh/membersPg/list
+- https://topseed.now.sh/membersPg/mem
+- https://topseed.now.sh/membersPg/list
 Both should return some JSON data.
 
 ### 1b. Using fetch() for remote data calls
@@ -33,7 +32,7 @@ Both should return some JSON data.
 This is an example of JavaScript 'fetch()' browser standard that replaces Ajax and XHR.
 
 ### 2a. Reading data from HTML form
-In browser with the Developer Tools open, go to <https://1595566120.rsc.cdn77.org/members/authJoin/>
+In browser with the Developer Tools open, go to <https://topseed-demos.now.sh/members/authJoin/>
 - Enter some data and click on NEW/JOIN button. See the form data logged in Developer Tools console.
 - View page source and the JavaScript function init(). It uses jQuery jsForm to access the html form data.
 (jQuery is loaded in /_js/setup.js) 
@@ -42,25 +41,23 @@ In browser with the Developer Tools open, go to <https://1595566120.rsc.cdn77.or
 You can use JavaScript to dynamically
 populate a list, and do further operations in the browser. That may help with
 a smoother, more desktop-like user experience.
-- Go to <https://1595566120.rsc.cdn77.org/members/dBindDT/index0.html>
+- Go to <https://topseed-demos.now.sh/members/dBindDT/index0.html>
 - View Developer Tools console. When you click on a line, you get a 'primary key' of the clicked row.
 - View page source and the JavaScript function dtInit(). 
 - Recommended: Read documentation at <http://datatables.net>. 
 
-x
-### 2c. In-Browser binding of list data obtained from an API via fetch()
+### 2c. In-Browser binding of data obtained via fetch()
 In the previous step, we saw list the list data in JSON format hardcoded in the page.
-- Go to https://1595566120.rsc.cdn77.org/members/dBind/?w=1 
+- Go to https://topseed-demos.now.sh/members/dBind/?w=1 
 - View page source.
 
 ## II More databinding
 
 ### 3a. Server-side binding of list data: the output
-In certain situations (e.g. for basic/slower mobile devices) you will want to use as little JavaScript 
-in the browser as possible. If you are able to avoid JavaScript at all the page may qualify as an "AMP" page 
-which gets higher ranking for mobile searches (and free caching) by Google. To get there, you may need 
+In certain situations (e.g. SEO, fast loading or older ddevices) you can't use .js in browser. If you are able to avoid JavaScript at all the page may qualify as an "AMP" page 
+which gets higher ranking for mobile searches by Google. To get there, you  need 
 to bind your data server-side before sending it to the browser as an already complete page.
-- Go to https://1595566120.rsc.cdn77.org/members/dBind/
+- Go to https://1595566120.rsc.cdn77.org/members/dBind/ (edge of topseed-demos.now.sh )
 - View page source and see the complete HTML and zero JavaScript.  
 
 ### 3b. Server-side binding of list data: the mechanism 

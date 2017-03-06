@@ -1,6 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const jwts = require("jsonwebtoken");
+const jwts = require('jsonwebtoken');
 const SIK = 'company_secret_code';
 function insertUser(userEmail, password) {
     console.log('insert', userEmail);

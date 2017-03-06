@@ -1,5 +1,4 @@
 'use strict';
-Object.defineProperty(exports, "__esModule", { value: true });
 function fakeRender() {
     let _people = [
         { name: 'John', age: 20 },

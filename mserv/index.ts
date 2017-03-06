@@ -4,10 +4,11 @@ import cors = require('cors')
 const middle = express()
 middle.use(bodyParser.json()) // parse application/json
 import compression = require('compression')
+
+// now -a topseed.now.sh
+// ######################
 middle.use(compression())
 middle.use(cors())
-
-// ###################### 
 
 middle.get('/', function (req, res) {
   res.send('nothing to see here')

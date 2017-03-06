@@ -1,8 +1,8 @@
 "use strict";
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const DATA = require("./data");
-const AUTH = require("./auth");
+const DATA = require('./data');
+const AUTH = require('./auth');
 router.post('/join', function (req, res) {
     console.log(req.body);
     const obj = req.body;
