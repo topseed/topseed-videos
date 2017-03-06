@@ -11,9 +11,12 @@ We will use the easiest one to learn: <http://riotjs.com>
 Check out this SPA, notice it is using a component:
 - <https://1595566120.rsc.cdn77.org/members/dBind/spa2.html?w=1>
 
+
 - Optional: Review slides https://1595566120.rsc.cdn77.org/slidesDBind/
 
 # Lab: Hands on DataBinding component
+
+- Demo of index.0
 
 - <https://github.com/topseed/topseed/tree/master/webApp/www/members/LABD>
 The lab is in the topseed that you downloaded.

@@ -67,7 +67,7 @@ returning it to the browser. Inspect the server-side code here:
 See ~ line 108 for a fetch(). It is using Promise, not callbacks. Also don't use XHR or Ajax. We place the fetch results in the HTML response.  
 
 
-### 4. Deciding whether to return the client-side or server-side rendered version
+### 4a. Deciding whether to return the client-side or server-side rendered version
 In production, you can use subdomains to decide. E.g. when m.topseed.io is called, return the AMP "html only" version.
 When www.topseed.io is called, return the "Web" version that contains JavaScript.
 In development we don't use domains, so we use ?w=1 to simulate a call to the "Web" version.
@@ -78,18 +78,17 @@ Node.js - which runs JavaScript on the server - allows us to use essentially the
 from an API, either client-side or server-side, depending on the request.
 
 For Search Engine Optimization (SEO), you may aim to make at least the homepage AMP/HTML only. Links may lead
-to rich "Web" pages that have JavaScript and more functionality. You can always move dynamic parts
-of the homepage that require JavaScript into an iframe. Ads use iframes, too.
+to rich "Web" pages that have JavaScript and nicer UX.
 
-### 5. File Layout
+### 4b. File Layout
 
 ![](layout.png)
 
 For each url, we have a directory and in that directory is both amp.html and spa.html.
 
-### 6. Authentication
+### 5. Authentication
 - Using Advanced REST Client, try: 
-- https://middle4top-vgylwtpbxs.now.sh/membersPg/join
+- https://topseed.now.sh/membersPg/join
 with 'body' of message as 
 {
 	"userEmail": "vicmasons@gmail.com"
