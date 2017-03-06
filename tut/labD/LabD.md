@@ -2,12 +2,12 @@
 #  DataBinding
 
 ### Goals
-Just because databinding is basic skill, it does not make it easy somehow. You will practice front end data-binding 
-a few different ways (browser, server, web component, etc). Pro-musicians and pro-basketball players practice, so should you. 
+Just because databinding is a basic skill, it does not make it easy somehow. You will practice front end data-binding
+a few different ways (browser, server, web component, etc). Pro-musicians and pro-basketball players practice; and so should you.
 Ideally you know of Sass, Scss or LESS and have more that just a few years out of school, this is not suitable for 
 people with only a few years experience out of school, you need some experience.
 
-We do some foundation level things and then some more advanced level related to data binding. 
+We do some foundation level things and then some more advanced level related to data binding:
 
 ## I Databinding basics
 ### 0. Setup
@@ -19,7 +19,7 @@ you'll find support there from the instructors.
  <http://code.visualstudio.com> (so you can get instructor support). Set it to auto-save and use tabs, not spaces, don't be a savage ;-).
 - Use Chrome browser. Click menu (:) on right/ More Tools/ Developer Tools. This will show you 'console' for: console.log('here'); in .js.
 - Optional: Install prepros.io and add /topseed/webApp as project.
-- Recommended: Install <https://zeit.co> and deploy /topseed/webApp. This way you start learning how to have a learning web site.
+- Recommended: Install <https://zeit.co> and deploy /topseed/webApp. This way you start learning how to host a web site. Also setup CDN77, to learn how to have a web app on www.
 
 ### 1a. MicroService, REST(y)
 Using Advanced REST Client above, execute POSTs to these urls:
