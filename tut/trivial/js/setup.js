@@ -12,7 +12,6 @@ loadjs([ // load libs:
 	}, async: false
 })
 
-
 function readStore() {
 	var ret =[]
 	var cookies = document.cookie.split(';')

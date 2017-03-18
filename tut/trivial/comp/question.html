@@ -1,5 +1,4 @@
 <x-question>
-
 <div class="mui-container mui-panel">
 	<form class="mui-form" id="frm1">
 		<legend>{ q }</legend>
@@ -32,11 +31,9 @@ this.on('mount', function() {
 	$('#sub1', this.root).click(function(e) {
 		const dat = $('#frm1', thiz.root).jsForm('get');
 		Cookies.set('a'+thiz.qNum, JSON.stringify(dat));
-		//console.log(thiz.qNum, Cookies.get('a'+thiz.qNum));
 		readStore()
-	})//click
-})//mount
-
+	})
+})
 this.setQuestion = function(qNum, q) {
 	console.log(qNum,q);
 	this.q = q;

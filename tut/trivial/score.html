@@ -1,0 +1,52 @@
+
+<head>
+  <link href="//cdn.muicss.com/mui-0.9.11/css/mui.min.css" rel="stylesheet" type="text/css"/>
+  <script src="https://www.masons-foundation.org/_js/libJs/loadjs.min.js" type="text/javascript"></script>
+  <script src="/js/setup.js" type="text/javascript"></script>
+  <script src="/js/index.js" type="text/javascript"></script>
+</head>
+<body>
+  <p></p>
+  <div class="mui-container">
+    <H2>Quiz:</H2>
+  </div>
+  <x-question></x-question>
+  <x-question></x-question>
+  <x-question></x-question>
+  <script type="riot/tag" src="/comp/question.html"></script>
+  <script>
+    var Qs = [
+    	['What is important', 'This', 'That', 'Other'],
+    	['What is your favorite park?', 'Central', 'East', 'West'],
+    	['What is the best color?', 'Red', 'Blue', 'Yellow'],
+    ]
+    console.log(JSON.stringify(Qs))
+    
+    function init() {
+    	console.log('pg init')
+    	deleteStore()
+    	riot.compile(function() {
+    		var qcomps = riot.mount('x-question');
+    
+    		qcomps[0].setQuestion(0, 'What is your favorite park?');
+    		qcomps[0].setChoice1('Central');
+    		qcomps[0].setChoice2('East');
+    		qcomps[0].setChoice3('West');
+    		qcomps[0].update();
+    
+    		qcomps[1].setQuestion(1, 'What is the best color?');
+    		qcomps[1].setChoice1('Blue');
+    		qcomps[1].setChoice2('Red');
+    		qcomps[1].setChoice3('Yellow');
+    		qcomps[1].update();
+    
+    		qcomps[2].setQuestion(2, 'What is important?');
+    		qcomps[2].setChoice1('This');
+    		qcomps[2].setChoice2('That');
+    		qcomps[2].setChoice3('Other');
+    		qcomps[2].update();
+    
+    	})
+    }
+  </script>
+</body>
