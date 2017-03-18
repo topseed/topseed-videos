@@ -1,0 +1,37 @@
+head
+	link(href='//cdn.muicss.com/mui-0.9.11/css/mui.min.css', rel='stylesheet', type='text/css')
+	script(src='https://www.masons-foundation.org/_js/libJs/loadjs.min.js', type='text/javascript')
+
+	script(src='/js/setup.js', type='text/javascript')
+	script(src='/js/index.js', type='text/javascript')
+
+body
+	p
+	.mui-container.mui-panel
+		form.mui-form#frm1
+			legend Tabs or spaces?
+
+			.mui-radio
+				label 
+					input#opt1(type='radio', name='data.choices', value='tabs') 
+					| Tabs
+			.mui-radio
+				label
+					input#opt2(type='radio', name='data.choices', value='spaces') 
+					| Spaces
+
+			button.mui-btn.mui-btn--raised#sub1(type='submit') Submit
+
+	script.
+
+		function init() { //https://github.com/corinis/jsForm
+			console.log('init')
+			$('#frm1').jsForm()
+
+			$('#sub1').click(function(e) { 
+				e.preventDefault()
+				const dat = $('#frm1').jsForm('get')
+				console.log(dat)
+			})
+
+		}

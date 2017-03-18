@@ -1,0 +1,39 @@
+
+<head>
+  <link href="//cdn.muicss.com/mui-0.9.11/css/mui.min.css" rel="stylesheet" type="text/css"/>
+  <script src="https://www.masons-foundation.org/_js/libJs/loadjs.min.js" type="text/javascript"></script>
+  <script src="/js/setup.js" type="text/javascript"></script>
+  <script src="/js/index.js" type="text/javascript"></script>
+</head>
+<body>
+  <p></p>
+  <div class="mui-container mui-panel">
+    <form class="mui-form" id="frm1">
+      <legend>Tabs or spaces?</legend>
+      <div class="mui-radio">
+        <label> 
+          <input id="opt1" type="radio" name="data.choices" value="tabs"/>Tabs
+        </label>
+      </div>
+      <div class="mui-radio">
+        <label>
+          <input id="opt2" type="radio" name="data.choices" value="spaces"/>Spaces
+        </label>
+      </div>
+      <button class="mui-btn mui-btn--raised" id="sub1" type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    function init() { //https://github.com/corinis/jsForm
+    	console.log('init')
+    	$('#frm1').jsForm()
+    
+    	$('#sub1').click(function(e) { 
+    		e.preventDefault()
+    		const dat = $('#frm1').jsForm('get')
+    		console.log(dat)
+    	})
+    
+    }
+  </script>
+</body>
