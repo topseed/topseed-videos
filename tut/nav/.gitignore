@@ -1,0 +1,15 @@
+###################### 
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/Thumbs.db
+Icon?
+Icon\r
+**/.dropbox
+**/.vscode/
+
+**/node_modules/**
+
+###################### 
+**/.project
+
