@@ -15,5 +15,7 @@
 		, "debug": ">=2.6"
 		, "bugsnag": ">=1.9"
 		, "now-logs": ">=0.0.7"
+		, "topseed-util": "=1.0.6"
+
 	}
 }

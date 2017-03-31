@@ -4,6 +4,7 @@ const server = express()
 
 // ###################### static
 server.use(express.static('webroot'))
+const Decider = require('./utils/Decider')
 
 // optional:
 const scribe = require('scribe-js')()
@@ -13,10 +14,18 @@ server.use('/logs', scribe.webPanel())
 const debug = require('debug')('my-app')
 debug('oh hi')
 
+// ###################### static
+server.use(Decider.decide)
+server.use(express.static('webroot'))
+
 //###################### start the server
-const PORT = 8080
-server.listen(PORT, '0.0.0.0', function() {
-	console.log('App listening on port '+PORT) 
+const PORT1 = 8080
+server.listen(PORT1, '0.0.0.0', function() {
+	console.log('App listening on port '+PORT1)
 	console.log('Press Ctrl+C to quit.')
 })
- 
+const PORT2 = 8082
+server.listen(PORT2, '0.0.0.0', function() {
+	console.log('App listening on port ' +PORT2)
+	console.log('Press Ctrl+C to quit.')
+})
