@@ -29,7 +29,7 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 }
 
 html, body {
-	height: auto;
+	height: 100%;
 }
 
 html {
@@ -37,17 +37,16 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	color: $primary-text-color;
 	background-color: $primary-color-text;
-	max-width: 100vw;
-	min-width: 100vw;
 	overflow-x: hidden;
 
 }
 
 // nav + shell ==========================================================================
-#appbar,
-#sidedrawer {
+#appbar, #sidedrawer {
 	position: fixed;
 	top: 0;
 }
@@ -90,7 +89,7 @@ body {
 
 // shell content + footer  ==========================================================================
 body {
-	margin-bottom: 0; 
+	//margin-bottom: 0; 
 }
 
 $footerH:  $base-line-height * 1.5;
@@ -98,14 +97,14 @@ $footerH:  $base-line-height * 1.5;
 #content-wrapper {
 	margin-top: $headerH;
 	background-color: antiquewhite;
-
+	flex-grow: 1;
+	overflow: auto;
 	font-family: 'Noto Serif', serif;
 }
 
 #content-wrapper * {
 	font-family: 'Noto Serif', serif;
 }
-
 
 footer, #footer {
 	vertical-align: middle;
