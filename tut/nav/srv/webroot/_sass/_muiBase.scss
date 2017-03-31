@@ -87,9 +87,9 @@ body {
 
 #ss1 {
 	min-height: 100vh;
-	//display: -ms-flexbox; // should be auto generated
+	display: -ms-flexbox; // should be auto generated
 	display: flex;
-	//-ms-flex-direction: column; // should be auto generated
+	-ms-flex-direction: column; // should be auto generated
 	flex-direction: column;
 	background: yellow;
 }
@@ -102,7 +102,7 @@ body {
 #content-wrapper {
 	margin-top: $headerH;
 	background-color: antiquewhite;
-	//-ms-flex: 1 0 auto;// should be auto generated
+	-ms-flex: 1 0 auto;// should be auto generated
 	flex: 1;
 	overflow: auto;
 	font-family: 'Noto Serif', serif;
