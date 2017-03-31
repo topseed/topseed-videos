@@ -28,9 +28,8 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 	//text-shadow:  1px 1px 1px rgba(0,0,0,0.004);
 }
 
-
 html {
-
+	height: auto; // amp?
 }
 
 body {
@@ -72,7 +71,6 @@ body {
 
 #brand {
 	text-decoration: none;
-
 }
 
 #menu {
@@ -96,9 +94,11 @@ body {
 	//margin-bottom: 0; 
 }
 
-$footerH:  $base-line-height * 1.5;
+$_footerHs:  $base-line-height * 1.5;
+$_footerHm:  $base-line-height * 1.5;
 
-$contentH: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
+$contentHs: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
+$contentHm: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 
 #content-wrapper {
 	margin-top: $headerH;
@@ -107,7 +107,7 @@ $contentH: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 	flex: 1 0 auto;
 	overflow: auto;
 	font-family: 'Noto Serif', serif;
-	height: $contentH;
+	height: $contentHs;
 
 }
 
@@ -117,9 +117,6 @@ $contentH: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 
 footer, #footer {
 	vertical-align: middle;
-	position:fixed;
-	bottom: 0;
-	height: $footerH;
 	max-width: 100vw;
 	min-width: 100vw;
 	margin-bottom: 0;
