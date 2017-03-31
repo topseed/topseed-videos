@@ -3,7 +3,7 @@ IMPORTANT: Use semantic and B.E.M. when naming style elements / DOM. Not like th
 /************************************************************************/
 
 // defaults from M.ui variables ============================================================================
-$base-line-height: 28px; // this is your web-app's *vertical rhythm*
+$base-line-height: 28px !default;// this is your web-app's *vertical rhythm*
 $headerH:  $base-line-height * 2;
 
 $mui-appbar-height:              $headerH;
@@ -40,13 +40,15 @@ body {
 }
 
 // nav ==========================================================================
-#appbar,
+$sidedrawer_width: 200px !default;
+
+header, #appbar,
 #sidedrawer {
 	position: fixed;
 	top: 0;
 }
 
-#appbar {
+header, #appbar {
 	left: 0;
 	max-width: 100vw;
 	min-width: 100vw;	
@@ -60,7 +62,6 @@ body {
 }
 
 #appbar table, #appbar table tr, #appbar table tr td,
-.navigation, .navigation *,
 #menu {
 	line-height: $headerH;
 	height: $headerH;

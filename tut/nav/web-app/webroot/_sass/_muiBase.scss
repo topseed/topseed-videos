@@ -35,13 +35,18 @@ html, body {
 html {
 
 }
+
 body {
 	color: $primary-text-color;
 	background-color: $primary-color-text;
+	max-width: 100vw;
+	min-width: 100vw;
+	overflow-x: hidden;
+
 }
 
 
-// nav ==========================================================================
+// nav + shell ==========================================================================
 #appbar,
 #sidedrawer {
 	position: fixed;
@@ -50,14 +55,14 @@ body {
 
 #appbar, header {
 	vertical-align: middle;
-
+	overflow-x: hidden;
 	left: 0;
 	max-width: 100vw;
 	min-width: 100vw;	
 	overflow-x: hidden;
 	color: $primary-color-text;
 	background-color: $primary-color-dark;
-	z-index: 50;
+	z-index: 10;
 	line-height: $headerH;
 	height: $headerH;
 	box-shadow: $box-shad;
@@ -79,27 +84,36 @@ body {
 	cursor: pointer;
 }
 
-#content-wrapper {
-	margin-top: $headerH;
-	transition: margin-left .1s ease; //transition to slide right
-}
 
 
-
-// footer  ==========================================================================
+// shell content + footer  ==========================================================================
 body {
 	margin-bottom: 0; 
 }
 
 $footerH:  $base-line-height * 1.5;
 
+#content-wrapper {
+	height: 100%;
+	width: 100%;
+	margin-top: $headerH;
+	background-color: yellow;
+}
+
+
 footer, #footer {
 	vertical-align: middle;
 	position:fixed;
 	bottom: 0;
 	height: $footerH;
-	width: 100%;
+	max-width: 100vw;
+	min-width: 100vw;
 	margin-bottom: 0;
+	z-index: 10;
+	overflow-x: hidden;
+	left: 0;
+	color: $primary-color-text;
+	background-color: $primary-color-dark;
 }
 
 // other  ==========================================================================
