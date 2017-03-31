@@ -21,6 +21,7 @@ if (req.socket.localPort == 8082) return true
 //**************** */
 console.log('AF v17.021a')
 exports.decide = function (req, res, next) {
+	console.log('.')
 	res.header('X-TimeSent', U.getDt() )
 	U.cacheLong(res) // default is long, later we set to quick if needed
 	//console.log('Decider ->')
@@ -29,14 +30,12 @@ exports.decide = function (req, res, next) {
 		next() // it is a static asset, ex: .jpg, .css
 	} else { // no dot, it is a path:
 		try {
-			var agent = useragent.lookup(req.headers['user-agent'])
-			console.log(agent.toAgent())
 			res.header('Content-Type', 'text/html')
 
 			const pgPath = U.getPath(ROOT,req)
 			const isAmp = serveAmp(req)
 
-			console.log('found '+pgPath)
+			console.log(isAmp,pgPath)
 
 			if (isAmp && fs.existsSync(pgPath + AMP)) { //AMP
 				
