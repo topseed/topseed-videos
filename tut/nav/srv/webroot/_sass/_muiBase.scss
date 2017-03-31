@@ -1,6 +1,6 @@
 
 // defaults from M.ui variables ============================================================================
-$base-line-height: 24px; // this is your web-app's *vertical rhythm*
+$base-line-height: 24px !default; // this is your web-app's *vertical rhythm* KEY
 $headerH:  $base-line-height * 1.5;
 
 $mui-appbar-height:              $headerH;
@@ -17,35 +17,39 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 
 @import 'sass/mui';
 
-*, *:before, *:after { 
+*, *:before, *:after { //?
 	box-sizing: inherit;
 }
 
 * {
 	font-family: 'Noto Sans', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	//-webkit-font-smoothing: antialiased;
+	//-moz-osx-font-smoothing: grayscale;
 	//text-shadow:  1px 1px 1px rgba(0,0,0,0.004);
 }
 
-html, body {
-	height: 100%;
-}
 
 html {
 
 }
 
 body {
+	height: auto; // amp?
+	//display: -ms-flexbox; // should be auto generated
 	display: flex;
+	//-ms-flex-direction: column; // should be auto generated
 	flex-direction: column;
 	color: $primary-text-color;
 	background-color: $primary-color-text;
+	overflow: scroll;
 	overflow-x: hidden;
+
+	animation:none;
 
 }
 
 // nav + shell ==========================================================================
+// due to congrative load, sidedrawer is in the class that extends this
 #appbar, #sidedrawer {
 	position: fixed;
 	top: 0;
@@ -94,12 +98,17 @@ body {
 
 $footerH:  $base-line-height * 1.5;
 
+$contentH: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
+
 #content-wrapper {
 	margin-top: $headerH;
 	background-color: antiquewhite;
-	flex-grow: 1;
+	//-ms-flex: 1 0 auto;// should be auto generated
+	flex: 1 0 auto;
 	overflow: auto;
 	font-family: 'Noto Serif', serif;
+	height: $contentH;
+
 }
 
 #content-wrapper * {
@@ -124,7 +133,6 @@ footer, #footer {
 // other  ==========================================================================
 a, button, .mui-btn {
 	touch-action: manipulation;
-	-ms-touch-action: manipulation;
 }
 
 .image {

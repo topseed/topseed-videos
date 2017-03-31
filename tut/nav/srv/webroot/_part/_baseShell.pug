@@ -3,14 +3,15 @@ html
 	head
 		block head
 
-	body
+	body(layout="fill")
 		link(href='https://fonts.googleapis.com/css?family=Noto+Sans',  rel='stylesheet')
 		link(href='https://fonts.googleapis.com/css?family=Noto+Serif', rel='stylesheet')
 
 		#ss1
 			block top
 
-			#content-wrapper
+			#content-wrapper(layout="fill")
+
 				block main
 
 			block footer
