@@ -97,7 +97,7 @@ body {
 $_footerHs:  $base-line-height * 1.5;
 $_footerHm:  $base-line-height * 1.5;
 
-$contentHs: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
+$contentHs: calc( 100vh - 200px) !default; //$base-line-height * 3;  KEY!
 $contentHm: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 
 #content-wrapper {
@@ -107,7 +107,7 @@ $contentHm: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 	flex: 1 0 auto;
 	overflow: auto;
 	font-family: 'Noto Serif', serif;
-	height: $contentHs;
+//	height: $contentHs;
 
 }
 
@@ -117,6 +117,7 @@ $contentHm: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 
 footer, #footer {
 	vertical-align: middle;
+	height: 100%;
 	max-width: 100vw;
 	min-width: 100vw;
 	margin-bottom: 0;
