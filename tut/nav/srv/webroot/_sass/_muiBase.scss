@@ -24,10 +24,6 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 	//text-shadow:  1px 1px 1px rgba(0,0,0,0.004);
 }
 
-.fullH {
-	min-height:100%;
-}
-
 html {
 	height:100%;
 }
@@ -36,14 +32,14 @@ body {
 	min-height:100%;
 	color: $primary-text-color;
 	background-color: $primary-color-text;
-	overflow: scroll;
+	overflow: auto;
 	overflow-x: hidden;
 	animation:none;
 
 }
 
 // nav + shell ==========================================================================
-// due to congrative load, sidedrawer is in the class that extends this
+// due to congrative load, put sidedrawer in the class that extends this file
 #appbar, #sidedrawer {
 	position: fixed;
 	top: 0;
@@ -96,10 +92,6 @@ body {
 	//-ms-flex-direction: column; // should be auto generated
 	flex-direction: column;
 	background: yellow;
-}
-
-#ss1 * {
-	//opacity: 0.95;
 }
 
 // shell content + footer  ==========================================================================
