@@ -17,10 +17,6 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 
 @import 'sass/mui';
 
-*, *:before, *:after { //?
-	box-sizing: inherit;
-}
-
 * {
 	font-family: 'Noto Sans', sans-serif;
 	//-webkit-font-smoothing: antialiased;
@@ -28,21 +24,20 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 	//text-shadow:  1px 1px 1px rgba(0,0,0,0.004);
 }
 
+.fullH {
+	min-height:100%;
+}
+
 html {
-	height: auto; // amp?
+	height:100%;
 }
 
 body {
-	height: auto; // amp?
-	//display: -ms-flexbox; // should be auto generated
-	display: flex;
-	//-ms-flex-direction: column; // should be auto generated
-	flex-direction: column;
+	min-height:100%;
 	color: $primary-text-color;
 	background-color: $primary-color-text;
 	overflow: scroll;
 	overflow-x: hidden;
-
 	animation:none;
 
 }
@@ -52,6 +47,11 @@ body {
 #appbar, #sidedrawer {
 	position: fixed;
 	top: 0;
+}
+
+#sidedrawer  {
+	left: -200px;
+	width: 200px;
 }
 
 #appbar {
@@ -89,25 +89,31 @@ body {
 	cursor: pointer;
 }
 
+#ss1 {
+	min-height: 100vh;
+	//display: -ms-flexbox; // should be auto generated
+	display: flex;
+	//-ms-flex-direction: column; // should be auto generated
+	flex-direction: column;
+	background: yellow;
+}
+
+#ss1 * {
+	//opacity: 0.95;
+}
+
 // shell content + footer  ==========================================================================
 body {
 	//margin-bottom: 0; 
 }
 
-$_footerHs:  $base-line-height * 1.5;
-$_footerHm:  $base-line-height * 1.5;
-
-$contentHs: calc( 100vh - 200px) !default; //$base-line-height * 3;  KEY!
-$contentHm: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
-
 #content-wrapper {
 	margin-top: $headerH;
 	background-color: antiquewhite;
 	//-ms-flex: 1 0 auto;// should be auto generated
-	flex: 1 0 auto;
+	flex: 1;
 	overflow: auto;
 	font-family: 'Noto Serif', serif;
-//	height: $contentHs;
 
 }
 
@@ -117,12 +123,9 @@ $contentHm: calc( 100vh - 72px) !default; //$base-line-height * 3;  KEY!
 
 footer, #footer {
 	vertical-align: middle;
-	height: 100%;
 	max-width: 100vw;
 	min-width: 100vw;
 	margin-bottom: 0;
-	z-index: 10;
-	overflow: hidden;
 	left: 0;
 	color: $primary-color-text;
 	background-color: $primary-color-dark;
