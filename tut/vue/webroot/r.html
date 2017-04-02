@@ -1,0 +1,45 @@
+
+<head>
+  <script src="https://unpkg.com/react@15/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+  <style>
+    .demo {
+    	border: 1px solid #ccc;
+    	margin: 1em;
+    	padding: 1em;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="js"></div>
+  <div id="react"></div>
+  <script>
+    const jsContainer = document.getElementById("js");
+    const reactContainer = document.getElementById("react");
+    const render = () => {
+    jsContainer.innerHTML = `
+    	<div class="demo">
+    	Hello JS
+    	<input />
+    	<p>${new Date()}</p>
+    	</div>
+    `;
+    ReactDOM.render(
+    	React.createElement(
+    	"div",
+    	{ className: "demo" },
+    	"Hello React",
+    	React.createElement("input"),
+    	React.createElement(
+    		"p",
+    		null,
+    		new Date().toString()
+    	)
+    	),
+    	reactContainer
+    );
+    }
+    setInterval(render, 1000);
+  </script>
+</body>
