@@ -3,7 +3,7 @@ loadjs([ // load libs:
 	'//cdn.jsdelivr.net/jquery/3.2.0/jquery.min.js'
 	,'//cdn.jsdelivr.net/riot/3.3.2/riot+compiler.min.js'
 	,'https://www.masons-foundation.org/_js/libJs/jquery.jsForm.min.js'
-	,'https://www.masons-foundation.org/_js/libJs/js.cookie.min.js'
+	,'https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/js.cookie.min.js'
 
 	], { success: function(){
 		console.log('fw libs loaded');
