@@ -17,22 +17,19 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <div id="ss1">
-      <div id="appbar">
-        <table width="100%">
-          <tr>
-            <td><a href="#sidedrawer" id="brand">&nbsp; ☰ &nbsp;<span class="mui--hidden-xs">Nav Ex <span>&trade;</span></span></a></td>
-            <td class="mui--text-right">
-              <ul class="mui-list--inline" id="menu">
-                <li><a href="/page/one/">One</a></li>
-                <li><a href="/page/two/">Two</a></li>
-                <li>&nbsp;</li>
-              </ul>
-            </td>
-          </tr>
-        </table>
+      <div id="appbar"><a href="#sidedrawer" id="appbar--brand">&nbsp; ☰ &nbsp;<span class="mui--hidden-xs">Nav Ex <span>&trade;</span></span></a>
+        <div id="appbar--push"></div>
+        <ul class="mui-list--inline" id="appbar--menu">
+          <li><a href="/page/one/">One</a></li>
+          <li><a href="/page/two/">Two </a></li>
+        </ul>
       </div>
-      <div id="sidedrawer">
-        <p>bla bla</p>
+      <div id="sidedrawer"><a href="#" id="sidedrawer--brand">&nbsp; ☰ &nbsp;<span>Nav Ex<span>&trade;</span></span></a>
+        <div class="mui-divider"></div>
+        <ul class="mui-list--unstyled" id="sidedrawer--menu">
+          <li><a href="/page/one/">One</a></li>
+          <li><a href="/page/two/">Two</a></li>
+        </ul>
       </div>
       <div id="content-wrapper">
         <div class="mui-container-fluid">
@@ -46,9 +43,7 @@
         </script>
         <div class="pushDown"></div>
       </div>
-      <footer id="footer">
-        <div class="mui-container">&nbsp; rfidThings™  is a business of Red Cap Development, LLC | 33440 Wallace Way | Yucaipa, CA 92399 | Call: +1 (951) 897‑4008 &nbsp;</div>
-      </footer>
+      <footer id="footer"><span class="mui--pull-left"> <a href="https://gitter.im/topseed-demos/Lobby" target="_blank">&nbsp; Forum </a></span><span class="mui--pull-right"><a href="https://github.com/topseed/topseed-demos" target="_blank">Kitchen Sink &nbsp;</a></span><span class="mui--clear-fix"></span></footer>
     </div>
   </body>
 </html>
