@@ -25,11 +25,11 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 }
 
 //footer is 1 or 2 lines depending on mq
-$footerH1:  $base-line-height * 1.5;
-$footerH2:  $base-line-height * 1.5;
+$footerH1:  $base-line-height * 1 + $base-line-height*.25 +  $base-line-height*.125 !default;
+$footerH2:  $base-line-height * 2 + $base-line-height*.25 +  $base-line-height*.125 !default;
 
 html {
-	position: relative;
+	position: relative; // for abosulte footer
 	min-height:100vh;
 }
 
@@ -38,12 +38,10 @@ body {
 	background-color: $primary-color-text;
 	overflow-y: auto;
 	overflow-x: hidden;
-
 	animation:none;
 	margin: 0;
-
 	margin-bottom: $footerH1;
-
+	background: blue;  //for debug
 }
 
 // nav + shell ========================================================================
@@ -59,6 +57,7 @@ body {
 	min-height: 100vh;
 	z-index: 50;
 	position: absolute;
+	background-color: red; //for override
 }
 
 //brand
@@ -82,7 +81,6 @@ body {
 	flex-direction: row;
 	align-content: space-between;
 }	
-
 
 #appbar--menu, #appbar--brand, #sidebar--brand {
 	vertical-align: middle;
@@ -109,31 +107,31 @@ body {
 }
 
 #ss1 {
-	background-color: yellow;
+	background-color: yellow; //debug
+
 }
 
-// shell content + footer  ========================================================================
+// shell content + footer  ==============================================================
 #content-wrapper {
 	margin-top: $headerH;
-	background-color: antiquewhite;
+	background-color: purple; //override
 	width: 100vw;
 	font-family: 'Noto Serif', serif;
 }
 
 #content-wrapper * {
 	font-family: 'Noto Serif', serif;
-}
+}	
 
 #footer {
+	padding-top: $base-line-height*.25;
+	padding-bottom: $base-line-height*.125;
 	height: $footerH1;
 	position: absolute;
 	left:0;
 	bottom: 0;
 	max-width: 100vw;
 	min-width: 100vw;
-	margin: 0;
-	padding:0;
-	border: 0;
 	color: $primary-color-text;
 	background-color: $primary-color-dark;
 	display: flex;
@@ -141,18 +139,25 @@ body {
 	align-content: space-between;
 }
 
+// footer games
+@media (max-width: 600px) {
+	body {
+		margin-bottom: $footerH2;
+	}
+	#footer {
+		height: $footerH2;
+	}
+}//end footer games
+
+
 #footer--push {
-	-ms-flex: 1 0 auto;// should be auto generated
 	flex: 1;
 }
 
 #footer--right {
 	margin-right: $mui-base-font-size *1.5;
 }
-// other  ========================================================================
-a, button, .mui-btn {  // should be auto generated
-	touch-action: manipulation;
-}
+// other  ==============================================================
 
 .image {
 	position: relative;
