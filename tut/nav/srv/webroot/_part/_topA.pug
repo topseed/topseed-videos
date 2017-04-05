@@ -1,17 +1,22 @@
 #appbar
-	table(width='100%')
-		tr
-			td
-				a(href='#sidedrawer')#brand &nbsp; ☰ &nbsp;
-					span.mui--hidden-xs Nav Ex 
-						span &trade;
-			td.mui--text-right
-				ul#menu.mui-list--inline
-					li
-						a(href='/page/one/') One
-					li
-						a(href='/page/two/') Two
-					li &nbsp;
+	
+	a(href='#sidedrawer')#appbar--brand &nbsp; ☰ &nbsp;
+		span.mui--hidden-xs Nav Ex 
+			span &trade;
+	#appbar--push
+	ul#appbar--menu.mui-list--inline
+		li
+			a(href='/page/one/') One
+		li
+			a(href='/page/two/') Two &nbsp;
 
 #sidedrawer
-	p bla bla
+	a(href='#')#sidedrawer--brand &nbsp; ☰ &nbsp;
+		span Nav Ex
+			span &trade;
+	.mui-divider
+	ul#sidedrawer--menu.mui-list--unstyled
+		li
+			a(href='/page/one/') One
+		li
+			a(href='/page/two/') Two

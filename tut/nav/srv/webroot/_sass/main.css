@@ -793,7 +793,7 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
 
 html { height: 100%; }
 
-body { min-height: 100%; color: #212121; background-color: #212121; overflow: auto; overflow-x: hidden; -webkit-animation: none; animation: none; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+body { min-height: 100%; color: #212121; background-color: #212121; overflow-y: auto; overflow-x: hidden; -webkit-animation: none; animation: none; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 
 #appbar, #sidedrawer { position: fixed; top: 0; }
 
@@ -801,23 +801,27 @@ body { min-height: 100%; color: #212121; background-color: #212121; overflow: au
 
 #sidedrawer--brand, #appbar--brand { text-decoration: none; }
 
-#appbar { vertical-align: middle; overflow: hidden; left: 0; max-width: 100vw; min-width: 100vw; overflow: hidden; color: #212121; background-color: #616161; z-index: 10; line-height: 36px; height: 36px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
+#appbar { overflow: none; vertical-align: middle; left: 0; max-width: 100vw; min-width: 100vw; overflow: hidden; color: #212121; background-color: #616161; z-index: 10; line-height: 36px; height: 36px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4); display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
 
-#appbar--menu, #appbar--brand, #sidebar--brand { vertical-align: middle; line-height: 36px; height: 36px; margin: 0; padding: 0; border: 0; overflow: hidden; }
+#appbar--menu, #appbar--brand, #sidebar--brand { vertical-align: middle; line-height: 36px; height: 36px; margin: 0; padding: 0; border: 0; }
 
-#appbar--push { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#appbar--push { -ms-flex: 1 0 auto; -webkit-flex: 1; flex: 1; }
 
-#appbar--menu { margin-right: 16.32px; }
+#appbar--menu { margin-right: 24.48px; }
 
 #appbar--menu li:hover, #appbar--brand li:hover * { color: #212121; background-color: #CDDC39; cursor: pointer; }
 
-#ss1 { min-height: 100vh; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+#ss1 { height: 100vh; display: -ms-flexbox; display: -webkit-flex; display: flex; -ms-flex-direction: column; -webkit-flex-direction: column; flex-direction: column; }
 
-#content-wrapper { margin-top: 36px; -webkit-flex: 1; -ms-flex: 1; flex: 1; width: 100vw; overflow-y: auto; font-family: 'Noto Serif', serif; background-color: lightgoldenrodyellow; }
+#content-wrapper { margin-top: 36px; background-color: antiquewhite; -ms-flex: 1 0 auto; -webkit-flex: 1; flex: 1; overflow-y: auto; width: 100vw; font-family: 'Noto Serif', serif; }
 
 #content-wrapper * { font-family: 'Noto Serif', serif; }
 
-footer, #footer { max-width: 100vw; min-width: 100vw; margin-bottom: 0; left: 0; color: #212121; background-color: #616161; }
+#footer { overflow: none; max-width: 100vw; min-width: 100vw; margin: 0; padding: 0; border: 0; color: #212121; background-color: #616161; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
+
+#footer--push { -ms-flex: 1 0 auto; -webkit-flex: 1; flex: 1; }
+
+#footer--right { margin-right: 24.48px; }
 
 a, button, .mui-btn { -ms-touch-action: manipulation; touch-action: manipulation; }
 

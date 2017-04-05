@@ -15,7 +15,6 @@ $mui-base-font-smoothing: true;
 $box-shad     : 0 2px 3px rgba(0,0,0,0.4);
 $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 
-
 @import 'sass/mui';
 
 * {
@@ -33,9 +32,9 @@ body {
 	min-height:100%;
 	color: $primary-text-color;
 	background-color: $primary-color-text;
-	overflow: auto;
+	overflow-y: auto;
 	overflow-x: hidden;
-	animation: none;
+	animation:none;
 	display: flex;
 }
 
@@ -57,8 +56,8 @@ body {
 }
 
 #appbar {
+	overflow: none;
 	vertical-align: middle;
-	overflow: hidden;
 	left: 0;
 	max-width: 100vw;
 	min-width: 100vw;	
@@ -72,7 +71,8 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-content: space-between;
-}
+}	
+
 
 #appbar--menu, #appbar--brand, #sidebar--brand {
 	vertical-align: middle;
@@ -81,16 +81,15 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	overflow: hidden;
 }
 
 #appbar--push {
-	//-ms-flex: 1 0 auto;// should be auto generated
+	-ms-flex: 1 0 auto;// should be auto generated
 	flex: 1;
 }
 
 #appbar--menu {
-	margin-right: $mui-base-font-size;
+	margin-right: $mui-base-font-size *1.5;
 }
 
 #appbar--menu li:hover, #appbar--brand li:hover * {
@@ -100,39 +99,54 @@ body {
 }
 
 #ss1 {
-	min-height: 100vh;
-	//display: -ms-flexbox; // should be auto generated
+	height: 100vh;
+	display: -ms-flexbox; // should be auto generated
 	display: flex;
-	//-ms-flex-direction: column; // should be auto generated
+	-ms-flex-direction: column; // should be auto generated
 	flex-direction: column;
+
 }
 
 // shell content + footer  ==========================================================================
 #content-wrapper {
 	margin-top: $headerH;
-	//-ms-flex: 1 0 auto;// should be auto generated
+	background-color: antiquewhite;
+	-ms-flex: 1 0 auto;// should be auto generated
 	flex: 1;
-	width: 100vw;
 	overflow-y: auto;
+	width: 100vw;
 	font-family: 'Noto Serif', serif;
-	background-color: lightgoldenrodyellow;
+
 }
 
 #content-wrapper * {
 	font-family: 'Noto Serif', serif;
 }
 
-footer, #footer {
+#footer {
+	overflow: none;
 	max-width: 100vw;
 	min-width: 100vw;
-	margin-bottom: 0;
-	left: 0;
+	margin: 0;
+	padding:0;
+	border: 0;
 	color: $primary-color-text;
 	background-color: $primary-color-dark;
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
 }
 
+#footer--push {
+	-ms-flex: 1 0 auto;// should be auto generated
+	flex: 1;
+}
+
+#footer--right {
+	margin-right: $mui-base-font-size *1.5;
+}
 // other  ==========================================================================
-a, button, .mui-btn { //?
+a, button, .mui-btn {  // should be auto generated
 	touch-action: manipulation;
 }
 
@@ -145,4 +159,3 @@ a, button, .mui-btn { //?
 	margin-left: auto;
 	margin-right: auto;
 }
-
