@@ -809,7 +809,7 @@ body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y:
 
 #appbar--menu { margin-right: 23.4px; }
 
-#appbar--menu li:hover, #appbar--brand li:hover * { color: #212121; background-color: #CDDC39; cursor: pointer; }
+#appbar--menu li:hover, #appbar--brand li:hover * { color: #212121; background-color: #CDDC39; cursor: pointer; line-height: 36px; }
 
 #ss1 { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; background-color: yellow; }
 
