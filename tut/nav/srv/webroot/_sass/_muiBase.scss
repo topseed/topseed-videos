@@ -130,7 +130,7 @@ body {
 	min-width: 100vw;
 	color: $primary-color-text;
 	background-color: $primary-color-dark;
-	display: block;
+	overflow: hidden;
 }
 
 #footer_div {
