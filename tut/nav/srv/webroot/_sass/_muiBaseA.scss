@@ -24,23 +24,18 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 	//text-shadow:  1px 1px 1px rgba(0,0,0,0.004);
 }
 
-//footer is 1 or 2 lines depending on mq
-$footerH1:  $base-line-height * 1 + $base-line-height*.25 +  $base-line-height*.125 !default;
-$footerH2:  $base-line-height * 2 + $base-line-height*.25 +  $base-line-height*.125 !default;
-
 html {
-	position: relative; // for abosulte footer
 	min-height:100vh;
 }
 
-body {	
+body {
+	min-height:100vh;
 	color: $primary-text-color;
 	background-color: $primary-color-text;
 	overflow-y: auto;
 	overflow-x: hidden;
 	animation:none;
-	margin: 0;
-	margin-bottom: $footerH1;
+	margin: 0;	
 	background: blue;  //for debug
 }
 
@@ -107,6 +102,8 @@ body {
 }
 
 #ss1 {
+	display: flex;
+	flex-direction: column;
 	background-color: yellow; //debug
 
 }
@@ -114,6 +111,7 @@ body {
 // shell content + footer  ==============================================================
 #content-wrapper {
 	margin-top: $headerH;
+	flex: 1;
 	background-color: purple; //override
 	width: 100vw;
 	font-family: 'Noto Serif', serif;
@@ -126,7 +124,6 @@ body {
 #footer {
 	padding-top: $base-line-height*.25;
 	padding-bottom: $base-line-height*.125;
-	height: $footerH1;
 	position: absolute;
 	left:0;
 	bottom: 0;
@@ -138,17 +135,6 @@ body {
 	flex-direction: row;
 	align-content: space-between;
 }
-
-// footer games
-@media (max-width: 600px) {
-	body {
-		margin-bottom: $footerH2;
-	}
-	#footer {
-		height: $footerH2;
-	}
-}//end footer games
-
 
 #footer--push {
 	flex: 1;

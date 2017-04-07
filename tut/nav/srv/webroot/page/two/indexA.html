@@ -160,7 +160,7 @@ template { display: none; }
 
 html { font-size: 10px; -webkit-tap-highlight-color: transparent; }
 
-body { font-family: "Noto Sans"; font-size: 16.32px; font-weight: 400; line-height: 1.429; color: #212121; background-color: #FFF; }
+body { font-family: "Noto Sans"; font-size: 15.6px; font-weight: 400; line-height: 1.429; color: #212121; background-color: #FFF; }
 
 a { color: #2196F3; text-decoration: none; }
 
@@ -168,19 +168,19 @@ a:hover, a:focus { text-decoration: underline; }
 
 a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
 
-p { margin: 0 0 11.5px; }
+p { margin: 0 0 11px; }
 
-ul, ol { margin-top: 0; margin-bottom: 11.5px; }
+ul, ol { margin-top: 0; margin-bottom: 11px; }
 
-hr { margin-top: 23px; margin-bottom: 23px; border: 0; height: 1px; background-color: rgba(0, 0, 0, 0.12); }
+hr { margin-top: 22px; margin-bottom: 22px; border: 0; height: 1px; background-color: rgba(0, 0, 0, 0.12); }
 
 strong { font-weight: 700; }
 
 abbr[title] { cursor: help; border-bottom: 1px dotted #2196F3; }
 
-h1, h2, h3 { margin-top: 23px; margin-bottom: 11.5px; }
+h1, h2, h3 { margin-top: 22px; margin-bottom: 11px; }
 
-h4, h5, h6 { margin-top: 11.5px; margin-bottom: 11.5px; }
+h4, h5, h6 { margin-top: 11px; margin-bottom: 11px; }
 
 html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
 
@@ -313,7 +313,7 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
 /** MUI Checkboxe and Radio Components */
 .mui-radio, .mui-checkbox { position: relative; display: block; margin-top: 10px; margin-bottom: 10px; }
 
-.mui-radio > label, .mui-checkbox > label { min-height: 23px; padding-left: 20px; margin-bottom: 0; font-weight: normal; cursor: pointer; }
+.mui-radio > label, .mui-checkbox > label { min-height: 22px; padding-left: 20px; margin-bottom: 0; font-weight: normal; cursor: pointer; }
 
 .mui-radio input:disabled, .mui-checkbox input:disabled { cursor: not-allowed; }
 
@@ -362,7 +362,7 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
 .mui--divider-right { border-right: 1px solid rgba(0, 0, 0, 0.12); }
 
 /** MUI Form Component */
-.mui-form legend { display: block; width: 100%; padding: 0; margin-bottom: 11.5px; font-size: 24.48px; color: #212121; line-height: inherit; border: 0; }
+.mui-form legend { display: block; width: 100%; padding: 0; margin-bottom: 11px; font-size: 23.4px; color: #212121; line-height: inherit; border: 0; }
 
 .mui-form fieldset { border: 0; padding: 0; margin: 0 0 20px 0; }
 
@@ -543,7 +543,7 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
   .mui-col-xl-offset-12 { margin-left: 100%; } }
 
 /** MUI Panel module */
-.mui-panel { padding: 15px; margin-bottom: 23px; border-radius: 0; background-color: #FFF; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12); }
+.mui-panel { padding: 15px; margin-bottom: 22px; border-radius: 0; background-color: #FFF; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12); }
 
 .mui-panel:before, .mui-panel:after { content: " "; display: table; }
 
@@ -554,7 +554,7 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
 @supports (-ms-ime-align: auto) { .mui-panel { box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.12), -1px 0px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12); } }
 
 /** MUI Table Component */
-.mui-table { width: 100%; max-width: 100%; margin-bottom: 23px; }
+.mui-table { width: 100%; max-width: 100%; margin-bottom: 22px; }
 
 .mui-table > thead > tr > th, .mui-table > tbody > tr > th, .mui-table > tfoot > tr > th { text-align: left; }
 
@@ -808,11 +808,13 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
 
 * { font-family: 'Noto Sans', sans-serif; }
 
-body { color: #212121; background-color: #212121; overflow-y: hidden; overflow-x: hidden; -webkit-animation: none; animation: none; display: -webkit-flex; display: flex; display: -ms-flexbox; }
+html { min-height: 100vh; }
+
+body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y: auto; overflow-x: hidden; -webkit-animation: none; animation: none; margin: 0; background: blue; }
 
 #appbar, #sidedrawer { position: fixed; top: 0; }
 
-#sidedrawer { left: -200px; width: 200px; z-index: 50px; position: absolute; }
+#sidedrawer { left: -200px; width: 200px; min-height: 100vh; z-index: 50; position: absolute; background-color: red; }
 
 #sidedrawer--brand, #appbar--brand { text-decoration: none; }
 
@@ -822,23 +824,21 @@ body { color: #212121; background-color: #212121; overflow-y: hidden; overflow-x
 
 #appbar--push { -ms-flex: 1 0 auto; -webkit-flex: 1; flex: 1; }
 
-#appbar--menu { margin-right: 24.48px; }
+#appbar--menu { margin-right: 23.4px; }
 
 #appbar--menu li:hover, #appbar--brand li:hover * { color: #212121; background-color: #CDDC39; cursor: pointer; }
 
-#ss1 { min-height: 100vh; overflow-y: auto; display: -ms-flexbox; display: -webkit-flex; display: flex; -ms-flex-direction: column; -webkit-flex-direction: column; flex-direction: column; background-color: yellow; }
+#ss1 { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; background-color: yellow; }
 
-#content-wrapper { margin-top: 36px; background-color: antiquewhite; -ms-flex: 1 0 auto; -webkit-flex: 1; flex: 1; width: 100vw; font-family: 'Noto Serif', serif; }
+#content-wrapper { margin-top: 36px; -webkit-flex: 1; -ms-flex: 1; flex: 1; background-color: purple; width: 100vw; font-family: 'Noto Serif', serif; }
 
 #content-wrapper * { font-family: 'Noto Serif', serif; }
 
-#footer { max-width: 100vw; min-width: 100vw; margin: 0; padding: 0; border: 0; color: #212121; background-color: #616161; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
+#footer { padding-top: 6px; padding-bottom: 3px; position: absolute; left: 0; bottom: 0; max-width: 100vw; min-width: 100vw; color: #212121; background-color: #616161; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
 
-#footer--push { -ms-flex: 1 0 auto; -webkit-flex: 1; flex: 1; }
+#footer--push { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
 
-#footer--right { margin-right: 24.48px; }
-
-a, button, .mui-btn { -ms-touch-action: manipulation; touch-action: manipulation; }
+#footer--right { margin-right: 23.4px; }
 
 .image { position: relative; width: 100%; }
 
