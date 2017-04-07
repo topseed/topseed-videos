@@ -1,9 +1,8 @@
 // changes from AMP to regular
 
-
 //footer is 1 or 2 lines depending on mq
-$footerH1:  $base-line-height * 1 + $base-line-height*.25 +  $base-line-height*.125 !default;
-$footerH2:  $base-line-height * 2 + $base-line-height*.25 +  $base-line-height*.125 !default;
+$footerH1:  $base-line-height * 1.5 !default;
+$footerH2:  $base-line-height * 2.5 !default;
 
 html {
 	position: relative; // for absolute footer
