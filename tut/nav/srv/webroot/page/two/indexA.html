@@ -834,11 +834,13 @@ body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y:
 
 #content-wrapper * { font-family: 'Noto Serif', serif; }
 
-#footer { padding-left: 6px; padding-right: 6px; max-width: 100vw; min-width: 100vw; color: #212121; background-color: #616161; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; }
+#footer { overflow: hidden; max-width: 100vw; min-width: 100vw; color: #212121; background-color: #616161; }
 
-#footer--push { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+#footer_div { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; padding-left: 12px; padding-right: 18px; }
 
-#footer--right { margin-right: 23.4px; }
+#footer_div--push { -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+
+#footer_div--right { margin-right: 23.4px; }
 
 .image { position: relative; width: 100%; }
 
@@ -908,7 +910,7 @@ body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y:
         </div>
       </div>
       <div id="footer">
-        <div class="mui-continer">rfidThings™  is a business of Red Cap Development, LLC | 33440 Wallace Way | Yucaipa, CA 92399 | Call: +1 (951) 897‑4008 &nbsp;</div>
+        <div class="mui-continer" id="footer_div">rfidThings™  is a business of Red Cap Development, LLC | 33440 Wallace Way | Yucaipa, CA 92399 | Call: +1 (951) 897‑4008</div>
       </div>
     </div>
   </body>
