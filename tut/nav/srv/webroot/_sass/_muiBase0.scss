@@ -18,6 +18,7 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 @import 'sass/mui';
 
 * {
+	line-height: $base-line-height;
 	font-family: 'Noto Sans', sans-serif;
 	//-webkit-font-smoothing: antialiased;
 	//-moz-osx-font-smoothing: grayscale;
@@ -29,8 +30,10 @@ $footerH1:  $base-line-height * 1 + $base-line-height*.25 +  $base-line-height*.
 $footerH2:  $base-line-height * 2 + $base-line-height*.25 +  $base-line-height*.125 !default;
 
 html {
+	line-height: $base-line-height;
 	position: relative; // for abosulte footer
 	min-height:100vh;
+	
 }
 
 body {	
@@ -124,8 +127,6 @@ body {
 }	
 
 #footer {
-	padding-top: $base-line-height*.25;
-	padding-bottom: $base-line-height*.125;
 	height: $footerH1;
 	position: absolute;
 	left:0;

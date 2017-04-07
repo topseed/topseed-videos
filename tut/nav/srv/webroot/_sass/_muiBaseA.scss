@@ -18,6 +18,7 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 @import 'sass/mui';
 
 * {
+	line-height: $base-line-height;
 	font-family: 'Noto Sans', sans-serif;
 	//-webkit-font-smoothing: antialiased;
 	//-moz-osx-font-smoothing: grayscale;
@@ -25,6 +26,7 @@ $box-shad__hov: 0 3px 4px rgba(0,0,0,0.7);
 }
 
 html {
+	line-height: $base-line-height;
 	min-height:100vh;
 }
 
@@ -122,11 +124,6 @@ body {
 }	
 
 #footer {
-	padding-top: $base-line-height*.25;
-	padding-bottom: $base-line-height*.125;
-	position: absolute;
-	left:0;
-	bottom: 0;
 	max-width: 100vw;
 	min-width: 100vw;
 	color: $primary-color-text;

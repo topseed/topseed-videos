@@ -1,0 +1,36 @@
+
+//footer is 1 or 2 lines depending on mq
+$footerH1:  $base-line-height * 1 + $base-line-height*.25 +  $base-line-height*.125 !default;
+$footerH2:  $base-line-height * 2 + $base-line-height*.25 +  $base-line-height*.125 !default;
+
+
+body {
+    min-height: 1vh;
+	margin-bottom: $footerH1;
+}
+
+
+#ss1 {
+    display: block;
+}
+
+
+
+#footer {
+	height: $footerH1;
+	position: absolute;
+	left:0;
+	bottom: 0;
+}
+
+
+
+// footer games
+@media (max-width: 600px) {
+	body {
+		margin-bottom: $footerH2;
+	}
+	#footer {
+		height: $footerH2;
+	}
+}//end footer games
