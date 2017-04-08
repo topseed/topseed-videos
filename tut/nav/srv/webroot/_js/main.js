@@ -4,6 +4,13 @@ loadjs.ready(['dependencyIE', 'keyLibs'], {// loaded setup libs
 	loadjs([
 		'https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/jquery.smoothState.js',
 
+		//images
+		'/_js/lib/jquery.fullpage.min.css',
+		'/_js/lib/jquery.fullpage.min.js',
+		'/_js/lib/slick.css',
+		'/_js/lib/slick.min.js'
+
+
 		], { success: function(){
 			console.log('loaded libs')
 			startApp()
