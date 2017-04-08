@@ -57,14 +57,24 @@ body {
 	min-height: 100vh;
 	z-index: 50;
 	position: absolute;
-	background-color: red; //for override
+	background-color: gray;
+	transition: transform .2s ease;
+
 }
+
+#sidedrawer:target { //makes it appear
+	transform: translateX(201px)
+
+}
+
+
+ // end side drawer
 
 //brand
 #sidedrawer--brand, #appbar--brand  {
 	text-decoration: none;
 }
-
+ 
 #appbar {
 	vertical-align: middle;
 	left: 0;

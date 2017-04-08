@@ -797,7 +797,9 @@ body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y:
 
 #appbar, #sidedrawer { position: fixed; top: 0; }
 
-#sidedrawer { left: -201px; width: 200px; min-height: 100vh; z-index: 50; position: absolute; background-color: red; }
+#sidedrawer { left: -201px; width: 200px; min-height: 100vh; z-index: 50; position: absolute; background-color: gray; transition: -webkit-transform .2s ease; transition: transform .2s ease; transition: transform .2s ease, -webkit-transform .2s ease; }
+
+#sidedrawer:target { -webkit-transform: translateX(201px); -ms-transform: translateX(201px); transform: translateX(201px); }
 
 #sidedrawer--brand, #appbar--brand { text-decoration: none; }
 
