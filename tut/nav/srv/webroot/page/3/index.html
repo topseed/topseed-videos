@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page Two</title>
+    <title>Page 3</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link rel="icon" href="/favicon.ico">
@@ -22,7 +22,7 @@
         <ul class="mui-list--inline" id="appbar--menu">
           <li><a href="/page/one/">One</a></li>
           <li><a href="/page/two/">Two</a></li>
-          <li><a href="/page/two/">3</a></li>
+          <li><a href="/page/3/">3</a></li>
         </ul>
       </div>
       <div id="sidedrawer"><a href="#" id="sidedrawer--brand">&nbsp; ☰ &nbsp;<span>Nav Ex<span>&trade;</span></span></a>
@@ -30,20 +30,67 @@
         <ul class="mui-list--unstyled" id="sidedrawer--menu">
           <li><a href="/page/one/">One</a></li>
           <li><a href="/page/two/">Two</a></li>
-          <li><a href="/page/two/">3</a></li>
+          <li><a href="/page/3/">3</a></li>
         </ul>
       </div>
       <div id="content-wrapper">
-        <div class="mui-container-fluid">
-          <p>hello again </p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <style>
+          .section {
+          	background-size: cover;
+          	background-attachment: fixed;
+          	background-image: url(res/beach768.jpg);
+          }
+          
+          .section1{
+          	background-image: url(res/beach768.jpg);
+          }
+          .section2{
+          	background-image: url(res/city768.jpg);
+          }
+          .section3{
+          	background-image: url(res/light768.jpg);
+          }
+          .section4{
+          	background-image: url(res/road768.jpg);
+          }
+          
+        </style>
+        <div id="fullpage">
+          <div class="section1 section">
+            <div class="mui-container-fluid">
+              <div class="mui-panel">
+                <H3>Oh Hi 1</H3>
+              </div>
+            </div>
+          </div>
+          <div class="section2 section">
+            <div class="mui-container-fluid">
+              <div class="mui-panel">
+                <H3>Oh Hi 2</H3>
+              </div>
+            </div>
+          </div>
+          <div class="section3 section">
+            <div class="mui-container-fluid">
+              <div class="mui-panel">
+                <H3>Oh Hi 3</H3>
+              </div>
+            </div>
+          </div>
+          <div class="section4 section">
+            <div class="mui-container-fluid">
+              <div class="mui-panel">
+                <H3>Oh Hi 4</H3>
+              </div>
+            </div>
+          </div>
         </div>
         <script>
           function init() {
+          	$('#fullpage').fullpage({
+          		//verticalCentered: false,
+          		css3:false
+          	})//config
           }
           A.onLoaded(init)
           

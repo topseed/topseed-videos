@@ -1,20 +1,58 @@
 extends  ../../_part/_baseShell
 
 block head
-	title Page Two
+	title Page 3
 	include ../../_part/_header
 
 block main
-	.mui-container-fluid
-		p hello again 
-		p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-		p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-		p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-		p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-		p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	style.
+		.section {
+			background-size: cover;
+			background-attachment: fixed;
+			background-image: url(res/beach768.jpg);
+		}
+
+		.section1{
+			background-image: url(res/beach768.jpg);
+		}
+		.section2{
+			background-image: url(res/city768.jpg);
+		}
+		.section3{
+			background-image: url(res/light768.jpg);
+		}
+		.section4{
+			background-image: url(res/road768.jpg);
+		}
+
+	#fullpage
+		.section1.section
+			.mui-container-fluid
+				.mui-panel
+					H3 Oh Hi 1
+
+		.section2.section
+			.mui-container-fluid
+				.mui-panel
+					H3 Oh Hi 2
+
+		.section3.section
+			.mui-container-fluid
+				.mui-panel
+					H3 Oh Hi 3
+
+		.section4.section
+			.mui-container-fluid
+				.mui-panel
+					H3 Oh Hi 4
+
 
 	script.
 		function init() {
+			$('#fullpage').fullpage({
+				//verticalCentered: false,
+				css3:false
+			})//config
 		}
 		A.onLoaded(init)
 
