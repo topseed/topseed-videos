@@ -797,7 +797,13 @@ body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y:
 
 #appbar, #sidedrawer { position: fixed; top: 0; }
 
-#sidedrawer { left: -201px; width: 200px; min-height: 100vh; z-index: 50; position: absolute; background-color: gray; transition: -webkit-transform .2s ease; transition: transform .2s ease; transition: transform .2s ease, -webkit-transform .2s ease; }
+#sidedrawer { left: -201px; width: 200px; position: absolute; overflow: hidden; min-height: 100vh; z-index: 50; background-color: gray; transition: -webkit-transform .2s ease; transition: transform .2s ease; transition: transform .2s ease, -webkit-transform .2s ease; }
+
+#sidedrawer--brand { vertical-align: middle; height: 36px; line-height: 36px; }
+
+#sidedrawer--menu li { overflow: hidden; line-height: 30px; padding-left: 25px; }
+
+#sidedrawer--menu li:hover { color: #212121; background-color: #CDDC39; }
 
 #sidedrawer:target { -webkit-transform: translateX(201px); -ms-transform: translateX(201px); transform: translateX(201px); }
 
@@ -811,7 +817,7 @@ body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y:
 
 #appbar--menu { margin-right: 23.4px; }
 
-#appbar--menu li:hover, #appbar--brand li:hover * { color: #212121; background-color: #CDDC39; cursor: pointer; line-height: 36px; }
+#appbar--menu li:hover { color: #212121; background-color: #CDDC39; cursor: pointer; line-height: 36px; }
 
 #ss1 { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; background-color: yellow; }
 

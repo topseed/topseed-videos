@@ -54,21 +54,37 @@ body {
 #sidedrawer  {
 	left: -201px;
 	width: 200px;
+	position: absolute;
+	overflow: hidden;
+
 	min-height: 100vh;
 	z-index: 50;
-	position: absolute;
 	background-color: gray;
 	transition: transform .2s ease;
 
 }
 
-#sidedrawer:target { //makes it appear
-	transform: translateX(201px)
+#sidedrawer--brand {
+	vertical-align: middle;
+	height: $headerH;
+	line-height: $headerH;
 
+}
+#sidedrawer--menu li {
+	overflow: hidden;
+	line-height: $base-line-height * 1.25;
+ 	padding-left: 25px;
+}
+#sidedrawer--menu li:hover {
+	color: $primary-color-text ;
+	background-color: $accent-color;
 }
 
 
- // end side drawer
+#sidedrawer:target { //makes it appear
+	transform: translateX(201px)
+}
+ // end side drawer, cotinued separate
 
 //brand
 #sidedrawer--brand, #appbar--brand  {
@@ -109,7 +125,7 @@ body {
 	margin-right: $mui-base-font-size *1.5;
 }
 
-#appbar--menu li:hover, #appbar--brand li:hover * {
+#appbar--menu li:hover {
 	color: $primary-color-text ;
 	background-color: $accent-color;
 	cursor: pointer;
