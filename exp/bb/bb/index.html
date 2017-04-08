@@ -1,0 +1,76 @@
+﻿<html>
+<head>
+	<link href='bootstrap-3.2.0-dist/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+	<link href='bootstrap-3.2.0-dist/css/bootstrap-theme.min.css' rel='stylesheet' type='text/css' />
+
+	<script src='libs/jquery-1.9.1.js' type='text/javascript'></script>
+	<script src='libs/underscore.js' type='text/javascript'></script>
+	<script src='bootstrap-3.2.0-dist/js/bootstrap.min.js' type='text/javascript'></script>
+	<script src='libs/backbone.js' type='text/javascript'></script>
+	<script src='js/model.js' type='text/javascript'></script>
+	<script src='js/view.js' type='text/javascript'></script>
+
+</head>
+<body>
+<script type='text/template' id='bookItem'> 
+	<li role='presentation'><a role='menuitem' tabindex='-1' href='#'> <%= BookName %> </a></li>
+</script>
+
+<div class='main'>
+	<br />
+	<input id='Button2' type='button' value='Add one more book' onclick='AddMoreBooks()' />
+	<input id='Button3' type='button' value='Update first book' onclick='changeBooks()' />
+
+	<div>
+		<ul id='bookList'>
+
+		</ul>
+	</div>
+
+	<div class='dropdown'>
+		<button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1'
+			data-toggle='dropdown'>
+			Books <span class='caret'></span>
+		</button>
+
+		<ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1' id='bookDropDown'>
+		</ul>
+
+	</div>
+</div>
+
+<script type='text/javascript'>
+
+var book1 = new Book({ ID: 1, BookName: 'Book 1' })
+var book2 = new Book({ ID: 2, BookName: 'Book 2' })
+var book3 = new Book({ ID: 3, BookName: 'Book 3' })
+var book4 = new Book({ ID: 4, BookName: 'Book 4' })
+var book5 = new Book({ ID: 5, BookName: 'Book 5' })
+var bookCollection = new BooksCollection([book1, book2, book3, book4, book5])
+
+var bookList = null
+
+$(document).ready(function () {
+
+	bookList = new bookListView({ el: $('#bookList'), model: bookCollection })
+	bookList.render()
+
+	var bookList2 = new bookListView2({ el: $('#bookDropDown'), model: bookCollection })
+	bookList2.render()
+})
+
+function AddMoreBooks() {
+	var i = bookCollection.length + 1
+
+	var newBook = new Book({ID: i, BookName: 'yet another book_' + i})
+
+	bookCollection.add(newBook)
+}
+
+function changeBooks() {
+	book1.set('BookName', book1.get('BookName') + '_updated')
+}
+
+</script>
+</body>
+</html>
