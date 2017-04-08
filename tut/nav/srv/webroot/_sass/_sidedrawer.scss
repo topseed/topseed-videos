@@ -1,0 +1,29 @@
+
+#sidedrawer  {
+	min-height: 100vh;
+	z-index: 50;
+	transition: transform .2s ease;
+
+}
+
+#sidedrawer:target { //makes it appear
+	transform: translateX(201px)
+}
+
+#sidedrawer--brand {
+	vertical-align: middle;
+	height: $headerH;
+	line-height: $headerH;
+
+}
+#sidedrawer--menu li {
+	overflow: hidden;
+	line-height: $base-line-height * 1.25;
+ 	padding-left: 25px;
+}
+#sidedrawer--menu li:hover {
+	color: $primary-color-text ;
+	background-color: $accent-color;
+
+}
+

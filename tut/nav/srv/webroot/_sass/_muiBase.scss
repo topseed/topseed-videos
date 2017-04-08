@@ -39,12 +39,11 @@ body {
 	overflow-x: hidden;
 	animation:none;
 	margin: 0;	
-	background: blue;  //for debug
 	display: flex;
 	flex-direction: row;
 }
 
-// nav + shell ========================================================================
+// nav + shell =======================================================================
 // due to congrative load, put sidedrawer in the class that extends this file
 #appbar, #sidedrawer {
 	position: fixed;
@@ -56,41 +55,19 @@ body {
 	width: 200px;
 	position: absolute;
 	overflow: hidden;
-
-	min-height: 100vh;
-	z-index: 50;
-	background-color: gray;
-	transition: transform .2s ease;
-
+	background-color: $primary-color-dark;
 }
-
-#sidedrawer--brand {
-	vertical-align: middle;
-	height: $headerH;
-	line-height: $headerH;
-
-}
-#sidedrawer--menu li {
-	overflow: hidden;
-	line-height: $base-line-height * 1.25;
- 	padding-left: 25px;
-}
-#sidedrawer--menu li:hover {
-	color: $primary-color-text ;
-	background-color: $accent-color;
-}
-
-
-#sidedrawer:target { //makes it appear
-	transform: translateX(201px)
-}
- // end side drawer, cotinued separate
+// end side drawer, cotinued separate
+@import '_sidedrawer';
 
 //brand
 #sidedrawer--brand, #appbar--brand  {
 	text-decoration: none;
 }
- 
+#sidedrawer--brand:hover, #appbar--brand:hover  {
+	font-weight:bold;
+}
+
 #appbar {
 	vertical-align: middle;
 	left: 0;
@@ -135,16 +112,15 @@ body {
 #ss1 {
 	display: flex;
 	flex-direction: column;
-	background-color: yellow; //debug
 }
 
 // shell content + footer  ==============================================================
 #content-wrapper {
 	margin-top: $headerH;
 	flex-grow: 1;
-	background-color: purple; //override
 	width: 100vw;
 	font-family: 'Noto Serif', serif;
+	background-color: $primary-color-light;
 }
 
 #content-wrapper * {
