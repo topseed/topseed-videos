@@ -2,7 +2,7 @@
 
 console.log('BaseCompsDS')
 
-class CompsDS {
+class CDS {
 			
 clearCookies() {
 	var cookies = document.cookie.split(';')
@@ -12,7 +12,7 @@ clearCookies() {
 	}
 }//()
 
-get DT_() { return 'DT_' }
+static get DT_() { return 'DT_' }
 
 writeC(nam, str) {
 	var jstr = JSON.stringify(str)
@@ -20,23 +20,23 @@ writeC(nam, str) {
 
 	var hash = window.btoa(jstr)
 	Cookies.set(nam, hash, { expires: exp})
-	Cookies.set(X.DT_, new Date(), { expires: 10 })// so we know when it will time out
+	Cookies.set(CDS.DT_, new Date(), { expires: 10 })// so we know when it will time out
 }//()
 
-get XBASIC() { return  'X-BASIC'}
+static get XBASIC() { return  'X-BASIC'}
 
-get XJT() { return  'X-JWT'}
+static get XJT() { return  'X-JWT'}
 
-fetch(ROOT_, url_, data_) {
-	var xjt_ = Cookies.get(X.XJT)
-	var xb_  = Cookies.get(X.XBASIC)
+Cfetch(ROOT_, url_, data_) {
+	var xjt_ = Cookies.get(CDS.XJT)
+	var xb_  = Cookies.get(CDS.XBASIC)
 	console.log('fetching ', url_, xb_)
 	return fetch(ROOT_ + url_ , { //1 call
 			method: 'post'
 			, headers: {
 				'Content-Type': 'application/json',
-				XJT : xjt_,
-				XBASIC: xb_
+				'X-JWT' : xjt_,
+				'X-BASIC': xb_
 			}
 			, body: JSON.stringify(data_)
 		}).then(function(response) { //2 returns a promise
