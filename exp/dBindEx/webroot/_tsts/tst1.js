@@ -3,7 +3,7 @@
 const ROOT = 'http://jsonplaceholder.typicode.com/'
 class Page1CDS extends CDS {
 	doFetch() {
-		return CDS.fetch(ROOT, 'comments')
+		return CDS.fetch(window.fetch, ROOT, 'comments')
 			.then(function(value) { 
 				console.log('back')
 				console.log(JSON.stringify(value))
