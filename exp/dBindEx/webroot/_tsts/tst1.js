@@ -1,11 +1,11 @@
 const ROOT = 'http://jsonplaceholder.typicode.com/'
 class Page1CDS extends CDS {
 	doFetch() {
-		this.Cfetch(ROOT, 'comments')
+		CDS.fetch(ROOT, 'comments')
 			.then(function(value) { 
 				console.log('back')
 				console.log(JSON.stringify(value))
-		
+				return value
 
 		}).catch(function(err) { //error
 			console.error('err')
@@ -14,15 +14,14 @@ class Page1CDS extends CDS {
 	}//()
 }//class
 
+const _cds = new Page1CDS()
 QUnit.test( 'test: fetch()', function( assert ) {
-	
 	assert.expect(0)
+	const pro = doTest(assert)
 
-	doTest(assert)
 
 })//tst
 
-const _cds = new Page1CDS()
 function doTest(assert) {
 	var done = assert.async()
 	_cds.doFetch()

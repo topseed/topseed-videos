@@ -1,7 +1,5 @@
 'use strict'
-
-console.log('BaseCompsDS')
-
+console.log('CDS')
 class CDS {
 			
 clearCookies() {
@@ -27,7 +25,7 @@ static get XBASIC() { return  'X-BASIC'}
 
 static get XJT() { return  'X-JWT'}
 
-Cfetch(ROOT_, url_, data_) {
+static fetch(ROOT_, url_, data_) {
 	var xjt_ = Cookies.get(CDS.XJT)
 	var xb_  = Cookies.get(CDS.XBASIC)
 	console.log('fetching ', url_, xb_)
@@ -50,6 +48,7 @@ Cfetch(ROOT_, url_, data_) {
 			return (response.json())//,response.headers.get('X-JWT'))
 		})
 }//_()
+
 
 } // class
 
