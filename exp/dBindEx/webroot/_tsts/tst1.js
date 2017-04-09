@@ -3,13 +3,7 @@ QUnit.test( 'test: fetch()', function( assert ) {
 	
 	assert.expect(0)
 
-	loadjs([
-		'/_js/DSrv.js'
-		], { success: function(){
-
-			doTest(assert)
-		}
-	})
+	doTest(assert)
 
 })//tst
 
@@ -24,7 +18,7 @@ function doTest(assert) {
 			}).then(function(value) { // 3 done:
 				// your code here:
 				console.log('back')
-				console.log(JSON.stringify(value))
+				//console.log(JSON.stringify(value))
 				
 				assert.ok( JSON.stringify(value), 'we got something, check console' )
 				done()
@@ -33,3 +27,21 @@ function doTest(assert) {
 
 }
 
+const ROOT = 'http://jsonplaceholder.typicode.com/'
+class MyPageCompsCDS extends CompsDS {
+
+}
+
+/*
+ex fetch use:
+	X.fetch(ROOT, 'RM/signUp', dat)
+		.then(function(value) { 
+			console.log('back')
+			//console.log(JSON.stringify(value))
+			...
+
+	}).catch(function(err) { //error
+		console.error('err')
+		console.error(err)
+	})//fetch()
+*/

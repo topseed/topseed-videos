@@ -1,8 +1,8 @@
 'use strict'
 
-console.log('DSrv')
+console.log('BaseCompsDS')
 
-class BaseDSrv {
+class CompsDS {
 			
 clearCookies() {
 	var cookies = document.cookie.split(';')
@@ -54,18 +54,4 @@ fetch(ROOT_, url_, data_) {
 } // class
 
 
-/*
-in main.js var ROOT = 'http://localhost:8080/'
-ex fetch use:
-	X.fetch(ROOT, 'RM/signUp', dat)
-		.then(function(value) { 
-			console.log('back')
-			//console.log(JSON.stringify(value))
-			...
-
-	}).catch(function(err) { //error
-		console.error('err')
-		console.error(err)
-	})//fetch()
-*/
 
