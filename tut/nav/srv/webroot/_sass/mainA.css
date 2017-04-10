@@ -793,7 +793,7 @@ html, body, button, input, textarea { -webkit-font-smoothing: antialiased; -moz-
 
 html { line-height: 24px; min-height: 100vh; }
 
-body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y: auto; overflow-x: hidden; -webkit-animation: none; animation: none; margin: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; }
+body { min-height: 100vh; color: #212121; background-color: #212121; overflow-y: auto; overflow-x: hidden; -webkit-animation: none; animation: none; margin: 0; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
 #appbar, #sidedrawer { position: fixed; top: 0; }
 
