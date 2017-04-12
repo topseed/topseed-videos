@@ -1800,7 +1800,7 @@ html {
 body {
   min-height: 100vh;
   color: #212121;
-  background-color: #212121;
+  background-color: #F5F5F5;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-animation: none;
