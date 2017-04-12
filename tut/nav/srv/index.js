@@ -19,7 +19,7 @@ server.use(Decider.decide)
 server.use(express.static('webroot'))
 
 //###################### start the server
-const PORT1 = 8080
+const PORT1 = 8081
 server.listen(PORT1, '0.0.0.0', function() {
 	console.log('App listening on port '+PORT1)
 	console.log('Press Ctrl+C to quit.')
