@@ -2,14 +2,13 @@
 loadjs.ready(['dependencyIE', 'keyLibs'], {// loaded setup libs
 	success: function(){
 	loadjs([
-		'https://cdn.rawgit.com/topseed/topseed-npm/master/v1/deps/jquery.smoothState.js',
+		'https://cdn.rawgit.com/topseed/topseed-npm/master/v1.08/deps/jquery.smoothState.js',
 
 		//images
-		'/_js/lib/jquery.fullpage.min.css',
-		'/_js/lib/jquery.fullpage.min.js',
-		'/_js/lib/slick.css',
-		'/_js/lib/slick.min.js'
-
+		'/_js/libJs/jquery.fullpage.min.css',
+		'/_js/libJs/jquery.fullpage.min.js',
+		'/_js/libJs/slick.css',
+		'/_js/libJs/slick.min.js'
 
 		], { success: function(){
 			console.log('loaded libs')
@@ -58,5 +57,6 @@ function startApp(){
 	}//sso
 	
 	const smoothState= $('#ss1').smoothState(ssoptions)
-
+	//let endTime = (new Date()).getTime() - _loadStarted
+	//console.log('load time ' + endTime)
 }//startApp()
