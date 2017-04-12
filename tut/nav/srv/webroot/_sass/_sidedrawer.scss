@@ -8,6 +8,10 @@
 	transform: translateX(201px)
 }
 
+#sidedrawer a {
+	text-decoration: none;
+}
+
 #sidedrawer--brand {
 	vertical-align: middle;
 	height: $headerH;
@@ -16,13 +20,12 @@
 
 #sidedrawer--menu li {
 	overflow: hidden;
-	line-height: $base-line-height * 1.25;
+	line-height: $headerH;
  	padding-left: 30px;
+	transition: background-color .2s ease; // optional
 }
 
 #sidedrawer--menu li:hover {
-	color: $primary-color-text ;
 	background-color: $accent-color;
-
 }
 
