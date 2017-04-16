@@ -12,7 +12,11 @@ block content
 			head.load('https://murder.site44.com/home/fB/api.js')
 		}
 
-		A.onLoaded(init)
+		loadjs.ready(['ready'], {// loaded setup libs
+			success: function(){
+				init()
+			}
+		})
 
 block footer
 	include  ../../_part/_footer
