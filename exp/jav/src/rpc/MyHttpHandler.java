@@ -1,4 +1,4 @@
-package ex;
+package rpc;
 
 import java.io.IOException;
 import java.util.Locale;

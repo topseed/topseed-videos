@@ -4,5 +4,6 @@
 	<classpathentry kind="lib" path="libs/gson-2.8.0.jar"/>
 	<classpathentry kind="lib" path="libs/httpcore5-5.0-alpha2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/mapdb-3.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

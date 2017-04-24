@@ -7,7 +7,7 @@ import org.apache.hc.core5.http.config.SocketConfig;
 import org.apache.hc.core5.http.impl.io.bootstrap.HttpServer;
 import org.apache.hc.core5.http.impl.io.bootstrap.ServerBootstrap;
 
-import ex.MyHttpHandler;
+import rpc.MyHttpHandler;
 
 public class Main {
 	static HttpServer _server = null;
