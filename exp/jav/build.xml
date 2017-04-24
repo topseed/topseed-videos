@@ -12,16 +12,16 @@
 	</target>
 
 	<target name="jar" depends="compile">
-		<mkdir dir="build/jar"/>
-		<jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
+		<jar destfile="build/HelloWorld.jar" basedir="build/classes">
 			<zipgroupfileset dir="libs" includes="*.jar" />
 			<manifest>
 				<attribute name="Main-Class" value="Main"/>
 			</manifest>
 		</jar>
+		<delete dir="build/classes"/>
 	</target>
 
 	<target name="run" depends="jar">
-		<java jar="build/jar/HelloWorld.jar" fork="true"/>
+		<java jar="build/HelloWorld.jar" fork="true"/>
 	</target>
 </project>
