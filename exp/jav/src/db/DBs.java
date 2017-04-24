@@ -11,7 +11,7 @@ public class DBs {
 	
 	public void  init() {
 		
-		_db = DBMaker.fileDB("file.db").make();
+		_db = DBMaker.memoryDB().make();
 		_jwa = _db.hashMap("map").createOrOpen();
 		_jwa.put("something", "here");
 		
