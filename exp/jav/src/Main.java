@@ -7,9 +7,7 @@ import org.apache.hc.core5.http.config.SocketConfig;
 import org.apache.hc.core5.http.impl.io.bootstrap.HttpServer;
 import org.apache.hc.core5.http.impl.io.bootstrap.ServerBootstrap;
 
-import db.DBs;
 import rpc.MyHttpHandler;
-import sec.JWT;
 
 public class Main {
 	static HttpServer _server = null;
@@ -40,8 +38,8 @@ public class Main {
 		_server.start();
 		_handler.setServer(_server);
 
-		System.out.println("Listening on port " + port);	
-		
+		System.out.println("Listening on port " + port);
+
 	}
 
 }
