@@ -13,7 +13,7 @@ var pre = require('./pre.js')
 const watch = require('watch')
 const process = require('process')
 // -----------------------------------------------
-const DIR = '/Users/vic/Dropbox/Apps/site44/cekvenich.site44.com/'
+const DIR = '/Users/Wolfgang/Dropbox/Apps/site44/wgehner.site44.com/'
 console.log(DIR)
 
 

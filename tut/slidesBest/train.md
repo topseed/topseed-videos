@@ -20,5 +20,4 @@ The Perspectives
 
 2 days 
 
-vic@eml.cc
-IDC Trainer of the Year
+hi@appthings.io

@@ -64,7 +64,7 @@ Congrats, you are now a web master.
 
 Glance docs on <https://www.polymer-project.org/1.0/docs/devguide/quick-tour>
 
-Complete the lab steps:  <http://cekvenich.site44.com/post/comp>
+Complete the lab steps:  <http://wgehner.site44.com/post/comp>
 
 <br>
 <img src='./links/BEM.png?raw=true' width = '60%' >

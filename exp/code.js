@@ -58,7 +58,7 @@ function pigWord(arg) {
 
 
 
-//console.log(filter('vic'));
+//console.log(filter('wolf'));
 //console.log(filter('v..i! c'));
 
 function filter(str) {// move special chars to end.

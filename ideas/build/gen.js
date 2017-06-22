@@ -1,5 +1,5 @@
 /*
-Copyright Vic Cekvenich - 2016: all rights reserved
+Copyright Wolfgang Gehner - 2016: all rights reserved
 Licensed under these terms only: http://creativecommons.org/licenses/by-sa/4.0
 If you require an alternative email vin(at)eml.cc
 

@@ -3,7 +3,7 @@
 #### and Markdown(md) = html.
 
 Lab details are here:
-<http://cekvenich.site44.com/post/app-shell>
+<http://wgehner.site44.com/post/app-shell>
 
 
 So lets imagine that you have to do several pages - and each page has a header and footer, just the middle is different. We will use Pug(Jade) to help pre-process.
@@ -63,7 +63,7 @@ Lab time: 1 hour  - to review all the pug files in the project and the user navi
 <br>
 
 This lab is here:
-<https://cekvenich.site44.com/post/seo>
+<https://wgehner.site44.com/post/seo>
 
 - Review _js/main.js. It shows a SPA based on SmoothState
 - Edit sitemap and submit to search engine. It takes about an hour using google webmaster tools.
@@ -147,7 +147,7 @@ Also, you should be able to see that developing a mobile SEO web site is much mo
 
 Optional:
 Place an ad banner: <http://murder.site44.com/home/usead>
-Sell something, anything: <http://cekvenich.site44.com/home/pay/>
+Sell something, anything: <http://wgehner.site44.com/home/pay/>
 
 
 

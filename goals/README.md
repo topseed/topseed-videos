@@ -8,9 +8,6 @@ and list of them in the 'asites' folder:
 
 Please take time to review some of the sites in asites folder (via a video player like VLC)
 
-Or check <https://cekvenich.site44.com/post/asites/>
-and best is to find your own inspirations.
-
 ##So what are they doing?
 They are going beyond fundamentals:
 <img src='./hints/fund.png?raw=true' width = '90%' >
@@ -83,8 +80,7 @@ Back end: PHP, ASP, JSP (Ruby, Python)
 
 ## Examples
 
-- https://www.masons-foundation.org
-- http://dev.rfidthings.com
+- http://www.rfidthings.com
 
 
 ## More?
@@ -95,5 +91,4 @@ Part I labs: Setup, Best examples, Sass and Material Design, Pre-processor, Mark
 
 Part II labs include: Web components, Interaction, API, Parallax, Data Binding, SEO and Appstore
 
-Support/chat/Q-A is here:
-http://gitter.im/murder-best/Lobby
+
